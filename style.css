@@ -437,6 +437,11 @@ img {
     margin-bottom: 20px;
 }
 
+.footer-column ul {
+    list-style-type: none;
+    padding: 0;
+}
+
 .footer-column a {
     color: #333;
     text-decoration: none;
