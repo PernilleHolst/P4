@@ -52,11 +52,29 @@ body {
     padding: 0;
 }
 
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
 /* Top-bar styling */
 .top-bar {
     background-color: #972620;
-    padding: 10px 0;
-    text-align: center;
+    padding: 6px 20px;
+    text-align: right;
 }
 
 .top-links {
@@ -64,8 +82,8 @@ body {
     padding: 0;
     margin: 0;
     display: flex;
-    justify-content: center;
-    gap: 20px;
+    justify-content: flex-end;
+    gap: 15px;
 }
 
 .top-links li {
@@ -75,7 +93,7 @@ body {
 .top-links a {
     text-decoration: none;
     color: white;
-    font-size: 14px;
+    font-size: 12px;
     text-transform: uppercase;
 }
 
@@ -85,12 +103,13 @@ body {
     align-items: center;
     justify-content: space-between;
     background-color: white;
-    padding: 15px 20px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 8px 30px; /* Reduceret højde */
+    border-bottom: 2px solid #ddd;
 }
 
+/* Juster logoets størrelse */
 .logo img {
-    height: 50px;
+    height: 45px; /* Mindre logo */
 }
 
 /* Navigation links */
@@ -100,6 +119,7 @@ body {
     gap: 20px;
     padding: 0;
     margin: 0;
+    margin-left: auto; /* Skubber navigationsteksten til højre */
 }
 
 .nav-links li {
@@ -110,9 +130,9 @@ body {
     text-decoration: none;
     color: #333;
     font-weight: 500;
-    font-size: 14px;
+    font-size: 12px;
     text-transform: uppercase;
-    padding: 10px;
+    padding: 6px;
     transition: color 0.3s ease-in-out;
 }
 
@@ -120,14 +140,22 @@ body {
     color: #972620;
 }
 
-/* CTA-knap */
+/* Søgeikon + CTA-knap */
+.right-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* CTA-knap flyttet til venstre for søgeikonet */
 .cta-button {
     background-color: #972620;
     color: white;
     font-weight: bold;
-    padding: 10px 20px;
+    padding: 6px 12px;
     border-radius: 5px;
     text-decoration: none;
+    font-size: 12px;
     transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
@@ -136,17 +164,19 @@ body {
     color: #972620;
 }
 
-/* Indkøbskurv & søgeikon */
-.cart, .search {
+/* Søgeikon */
+.search {
     text-decoration: none;
     color: #333;
-    font-size: 18px;
-    margin-left: 15px;
+    font-size: 16px;
 }
 
-.cart:hover, .search:hover {
+.search:hover {
     color: #972620;
 }
+
+
+
 
 
 /* Hero Section */
