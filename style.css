@@ -447,7 +447,7 @@ img {
     text-decoration: none;
     display: block;
     margin-bottom: 10px;
-    transition: color 0.3s;
+    transition: color 0.1s;
 }
 
 .footer-column a:hover {
