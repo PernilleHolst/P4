@@ -86,13 +86,17 @@ img {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/hero-image.jpg');
-    background-size: cover;
-    background-position: center;
-    color: white;
-    padding: 100px 0;
-    position: relative;
-    height: 80vh;
+    .hero {
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/Headerpic.png');
+        background-size: cover;
+        background-position: center;
+        color: white;
+        padding: 100px 0;
+        position: relative;
+        height: 80vh;
+        display: flex;
+        align-items: center;
+    }
 }
 
 .hero-content {
@@ -119,6 +123,19 @@ img {
     top: 50%;
     transform: translateY(-50%);
     width: 350px;
+}
+
+.amount-options button.active {
+    background-color: #972620;
+    color: white;
+}
+
+.donation-info {
+    color: #777;
+    font-size: 14px;
+    text-align: center;
+    margin: -15px 0 20px 0;
+    font-style: italic;
 }
 
 .donation-box h3 {
@@ -517,5 +534,19 @@ img {
 
     .footer-column {
         margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .donation-box {
+        position: static;
+        transform: none;
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    .hero {
+        height: auto;
+        padding: 50px 0;
     }
 }
