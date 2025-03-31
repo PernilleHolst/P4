@@ -6,14 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inges-kattehjem Underside</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="script.js">
 </head>
 
 <body>
-    <!-- Navigation Bar -->
     <nav class="navbar">
         <div class="container">
             <a href="#" class="logo">
-                <img src="images/logo.png" alt="Cat Rescue Logo">
+                <img src="images/logo.jpeg" alt="Cat Rescue Logo">
             </a>
             <ul class="nav-links">
                 <li><a href="#">Hjem</a></li>
@@ -30,24 +30,29 @@
         <img src="images/Headerpic.png" alt="headerpic">
         <div class="container">
             <div class="hero-content">
-                <h1>Red en kat i dag</h1>
-                <p>Din støtte gør en forskel for katte i nød</p>
             </div>
             <div class="donation-box">
                 <h3>Støt vores katte</h3>
                 <div class="donation-options">
                     <div class="donation-type">
-                        <button class="active">Månedligt</button>
-                        <button>Engangsbeløb</button>
+                        <label class="donation-radio">
+                            <input type="radio" name="donation-frequency" value="monthly" checked>
+                            <span>Månedligt</span>
+                        </label>
+                        <label class="donation-radio">
+                            <input type="radio" name="donation-frequency" value="once">
+                            <span>Engangsbeløb</span>
+                        </label>
                     </div>
                     <div class="amount-options">
-                        <button>50 kr</button>
-                        <button>100 kr</button>
-                        <button>250 kr</button>
+                        <button data-amount="50">50 kr</button>
+                        <button data-amount="100">100 kr</button>
+                        <button data-amount="250" class="active">250 kr</button>
                     </div>
                     <div class="custom-amount">
                         <input type="number" placeholder="Indtast beløb">
                     </div>
+                    <p class="donation-info"><em>Går til at hjælpe 20 familieløse katte</em></p>
                     <button class="donate-btn">Doner nu</button>
                 </div>
                 <div class="payment-options">
