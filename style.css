@@ -226,6 +226,53 @@ img {
     cursor: pointer;
 }
 
+.support-section {
+    padding: 80px 0;
+}
+
+.support-section h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 50px;
+}
+
+.support-columns {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.column {
+    flex: 1;
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.column img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.support-btn {
+    padding: 10px 20px;
+    background-color: #972620;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.support-btn:hover {
+    background-color: #972620c3;
+}
+
 /* Benefits Section */
 .benefits-section {
     padding: 80px 0;
