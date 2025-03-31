@@ -433,22 +433,75 @@ p {
 
 /* Application Section */
 .application-section {
-    padding: 80px 0;
+    padding: 25px 0;
+    margin-bottom: 65px;
 }
 
-.application-section h2 {
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Flexbox til at opdele sektionen i to */
+.application-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: center;
+}
+
+/* Informationsboks - venstre side */
+.info-box {
+    flex: 1;
+    max-width: 50%;
+    height: 700px
+}
+
+.info-box h2 {
+    font-size: 28px;
+    color: #000;
+    margin-bottom: 14%;
+}
+
+.info-box p {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.6;
+}
+
+.info-image {
+    width: 100%;
+    max-width: 230px;
+    height: auto;
+    display: block;
+    margin: 0 0 20px 0;
+    border-radius: 10px;
+    margin-top: 10%;
+    
+}
+
+/* Formularboks - højre side */
+.form-box {
+    flex: 1;
+    max-width: 50%;
     text-align: center;
-    font-size: 32px;
-    margin-bottom: 50px;
+    margin-top: 10%;
+}
+
+.form-title {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #972620;
 }
 
 .application-form {
-    max-width: 800px;
-    margin: 0 auto;
     background-color: #f9f9f9;
     padding: 40px;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    text-align: left;
 }
 
 .form-group {
@@ -508,12 +561,24 @@ p {
     background-color: #972620c3;
 }
 
+/* Gør layout responsivt */
+@media (max-width: 768px) {
+    .application-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .info-box, .form-box {
+        max-width: 100%;
+    }
+}
 /* Footer */
 .footer {
-    background-color: #25808870;
+    background-color: #fff;
     color: #333;
     padding: 60px 0 20px;
     justify-content: center;
+    border-top: #972620 solid 2px;
 }
 
 .footer-content {
@@ -552,7 +617,7 @@ p {
 
 .footer-divider {
     width: 2px;
-    background-color: #333;
+    background-color: #972620;
     height: auto;
     min-height: 150px;
     align-self: stretch;
@@ -604,6 +669,8 @@ p {
     margin-bottom: 10px;
     border-radius: 5px;
     border: none;
+    color: #000;
+    background-color: #f3f3f3;
 }
 
 .footer-column button {

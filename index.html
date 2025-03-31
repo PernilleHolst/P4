@@ -169,27 +169,41 @@
     <!-- Application Section -->
     <section class="application-section">
         <div class="container">
-            <h2>Ansøg her</h2>
-            <form class="application-form">
-                <div class="form-group">
-                    <input type="text" placeholder="Fulde navn" required>
+            <div class="application-content">
+                <!-- Informations Tekst -->
+                <div class="info-box">
+                    <h2>Bliv frivillig hos Inges Kattehjem</h2>
+                    <p>Vi er en dyreværnsorganisation, der drives af donationer og frivillige kræfter. Uden vores frivillige kunne vi ikke hjælpe de mange katte, der har brug for omsorg og et nyt hjem.</p>
+                    <p>Hverdagen er travl, især i højsæsonen (maj-september), hvor mange katte venter på nye familier. Som frivillig hjælper du med rengøring, fodring og pleje af kattene – en vigtig indsats, der kræver ansvar og engagement.</p>
+                    <p>Arbejdet kan være fysisk krævende, men til gengæld utroligt givende. Du bliver en del af et fællesskab, hvor din indsats gør en reel forskel for kattene – og du får masser af tid til at nusse dem!</p>
+                    <img src="images/soedekatte.jpg" alt="to katte" class="info-image">
                 </div>
-                <div class="form-group">
-                    <input type="email" placeholder="Email" required>
+    
+                <!-- Ansøgningsformular -->
+                <div class="form-box">
+                    <h2 class="form-title">Ansøg her</h2>
+                    <form class="application-form">
+                        <div class="form-group">
+                            <input type="text" placeholder="Fulde navn" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" placeholder="Telefonnummer">
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Din besked" rows="5"></textarea>
+                        </div>
+                        <div class="file-upload">
+                            <label for="file">Vedhæft filer</label>
+                            <input type="file" id="file">
+                            <div class="drop-area">Træk filer her eller klik for at uploade</div>
+                        </div>
+                        <button type="submit" class="submit-btn">Send nu</button>
+                    </form>
                 </div>
-                <div class="form-group">
-                    <input type="tel" placeholder="Telefonnummer">
-                </div>
-                <div class="form-group">
-                    <textarea placeholder="Din besked" rows="5"></textarea>
-                </div>
-                <div class="file-upload">
-                    <label for="file">Vedhæft filer</label>
-                    <input type="file" id="file">
-                    <div class="drop-area">Træk filer her eller klik for at uploade</div>
-                </div>
-                <button type="submit" class="submit-btn">Send nu</button>
-            </form>
+            </div>
         </div>
     </section>
 
