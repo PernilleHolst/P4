@@ -97,6 +97,10 @@ body {
     text-transform: uppercase;
 }
 
+.cart {
+    padding: 6px 12px;
+}
+
 /* Hovednavigation */
 .main-nav {
     display: flex;
@@ -104,7 +108,6 @@ body {
     justify-content: space-between;
     background-color: white;
     padding: 5px 30px; /* Reduceret højde */
-    border-bottom: 2px solid #ddd;
 }
 
 /* Juster logoets størrelse */
