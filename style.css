@@ -458,11 +458,14 @@ img {
 .social-links img {
     width: 30px;
     height: 30px;
+    transition: filter 0.3s ease-in-out;
 }
 
-.social-links :hover {
+.social-links a:hover img {
+    filter: invert(17%) sepia(94%) saturate(656%) hue-rotate(346deg) brightness(94%) contrast(95%);
     cursor: pointer;
 }
+
 
 .footer-column input {
     width: 100%;
