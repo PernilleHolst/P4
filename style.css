@@ -26,6 +26,10 @@ h4 {
     color: #333;
 }
 
+h5 {
+color: black;
+}
+
 p {
     margin-bottom: 15px;
 }
@@ -75,6 +79,8 @@ body {
     background-color: #972620;
     padding: 1px 20px;
     text-align: right;
+    padding-top: 3px;
+    margin-bottom: -3px;
 }
 
 .top-links {
@@ -84,6 +90,7 @@ body {
     display: flex;
     justify-content: flex-end;
     gap: 20px;
+
 }
 
 .top-links li {
@@ -93,8 +100,16 @@ body {
 .top-links a {
     text-decoration: none;
     color: white;
-    font-size: 13px;
+    font-size: 14px;
     text-transform: uppercase;
+}
+
+.cart{
+    margin-right: 2%;
+    margin-left: 2%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 
@@ -106,6 +121,8 @@ body {
     background-color: white;
     padding: 5px 30px; /* Reduceret højde */
     border-bottom: 2px solid #ddd;
+    padding-top: 10px;
+    margin-bottom: -4px;
 }
 
 /* Juster logoets størrelse */
@@ -143,7 +160,7 @@ body {
 
 /* Søgeikon + CTA-knap */
 .call-to-action {
-    margin-left: 2%;
+    margin-left: 3%;
     display: flex;
     align-items: center;
     gap: 10px;
@@ -153,17 +170,17 @@ body {
 .cta-button {
     background-color: #972620;
     color: white;
-    font-weight: bold;
-    padding: 6px 12px;
+    padding: 8px 18px;
     border-radius: 5px;
     text-decoration: none;
-    font-size: 12px;
+    font-size: 14px;
     transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    margin-top: -10px;
 }
 
 .cta-button:hover {
-    background-color: #ffcccb;
-    color: #972620;
+    background-color: #257F88;
+    color: #fff;
 }
 
 /* Søgeikon */
@@ -171,6 +188,8 @@ body {
     text-decoration: none;
     color: #333;
     font-size: 16px;
+    margin-top: -10px;
+    padding-left: 7px;
 }
 
 .search:hover {
@@ -195,6 +214,15 @@ body {
 
 .hero-content {
     max-width: 600px;
+
+}
+
+.hero-image {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    margin-bottom: 40px;
 }
 
 .hero h1 {
@@ -207,6 +235,16 @@ body {
     margin-bottom: 30px;
 }
 
+.overlay-image {
+    position: absolute;
+    top: 380px;
+    left: 0px;
+    width: 50px;
+    height: auto;
+    transform: scale(18); /* Scale it 10 times larger */
+    transform-origin: top left; /* Ensure it scales from the correct corner */
+}
+
 .donation-box {
     background-color: white;
     padding: 30px;
@@ -214,9 +252,10 @@ body {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     position: absolute;
     right: 10%;
-    top: 50%;
+    top: 80%;
     transform: translateY(-50%);
     width: 350px;
+    border: #972620 solid 2px;
 }
 
 .donation-info {
@@ -321,62 +360,104 @@ body {
 }
 
 .support-section {
-    padding: 80px 0;
+    padding: 0;
+    margin: 0;
 }
 
-.support-section h2 {
-    text-align: center;
-    font-size: 32px;
-    margin-bottom: 50px;
+.support-section h5{
+    margin: 0;
+    padding: 0;
+    font-size: 48px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1200px;
+    margin-bottom: 80px;
 }
 
 .support-columns {
+    margin-top: 100px;
     display: flex;
-    justify-content: space-between;
-    gap: 30px;
+    gap: 40px;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .column {
     flex: 1;
-    background-color: white;
-    border-radius: 10px;
+    max-width: 350px;
+    background-color: #dbe8e6;
+    border-radius: 15px;
     padding: 30px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    text-align: center;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
 }
 
 .column img {
     width: 100%;
-    height: 200px;
+    height: 250px;
     object-fit: cover;
-    border-radius: 5px;
-    margin-bottom: 20px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.column video {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.content {
+    padding: 20px;
+}
+
+h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.6;
 }
 
 .support-btn {
-    padding: 10px 20px;
+    padding: 12px 20px;
     background-color: #972620;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 7px;
     cursor: pointer;
     transition: background-color 0.3s;
+    display: block;
+    width: fit-content;
+    margin-top: 20px;
 }
 
 .support-btn:hover {
-    background-color: #972620c3;
+    background-color: #7a1e18;
 }
+
+
 
 /* Benefits Section */
 .benefits-section {
     padding: 80px 0;
-    background-color: #f5f5f5;
+    background-color: #fff;
 }
 
 .benefits-section h2 {
-    text-align: center;
+    text-align: left;
     font-size: 32px;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
 }
 
 .benefits-content {
@@ -513,17 +594,48 @@ body {
     background-color: #25808870;
     color: #333;
     padding: 60px 0 20px;
+    justify-content: center;
 }
 
 .footer-content {
     display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+.footer-columns {
+    display: flex;
     justify-content: space-between;
-    margin-bottom: 40px;
+    width: 100%;
+    max-width: 1100px;
 }
 
 .footer-column {
     flex: 1;
     padding: 0 20px;
+}
+
+.footer-left, .footer-right {
+    display: flex;
+    flex: 1;
+    gap: 40px;
+}
+
+.footer-right {
+    margin-left: 40px;
+}
+
+.footer-left {
+    margin-right: 40px;
+}
+
+.footer-divider {
+    width: 2px;
+    background-color: #333;
+    height: auto;
+    min-height: 150px;
+    align-self: stretch;
 }
 
 .footer-column h4 {
@@ -586,7 +698,6 @@ body {
 .copyright {
     text-align: center;
     padding-top: 20px;
-    border-top: 1px solid #444;
 }
 
 /* Responsive Design */
