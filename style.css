@@ -73,7 +73,7 @@ body {
 /* Top-bar styling */
 .top-bar {
     background-color: #972620;
-    padding: 6px 20px;
+    padding: 1px 20px;
     text-align: right;
 }
 
@@ -83,7 +83,7 @@ body {
     margin: 0;
     display: flex;
     justify-content: flex-end;
-    gap: 15px;
+    gap: 20px;
 }
 
 .top-links li {
@@ -93,7 +93,7 @@ body {
 .top-links a {
     text-decoration: none;
     color: white;
-    font-size: 12px;
+    font-size: 13px;
     text-transform: uppercase;
 }
 
@@ -103,13 +103,13 @@ body {
     align-items: center;
     justify-content: space-between;
     background-color: white;
-    padding: 8px 30px; /* Reduceret højde */
+    padding: 5px 30px; /* Reduceret højde */
     border-bottom: 2px solid #ddd;
 }
 
 /* Juster logoets størrelse */
 .logo img {
-    height: 45px; /* Mindre logo */
+    height: 50px; /* Mindre logo */
 }
 
 /* Navigation links */
@@ -130,9 +130,9 @@ body {
     text-decoration: none;
     color: #333;
     font-weight: 500;
-    font-size: 12px;
+    font-size: 14px;
     text-transform: uppercase;
-    padding: 6px;
+    padding: 3px;
     transition: color 0.3s ease-in-out;
 }
 
@@ -141,7 +141,8 @@ body {
 }
 
 /* Søgeikon + CTA-knap */
-.right-actions {
+.call-to-action {
+    margin-left: 2%;
     display: flex;
     align-items: center;
     gap: 10px;
@@ -174,9 +175,6 @@ body {
 .search:hover {
     color: #972620;
 }
-
-
-
 
 
 /* Hero Section */
