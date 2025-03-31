@@ -413,6 +413,11 @@ img {
     height: 30px;
 }
 
+.social-links :hover {
+    background-color: #972620;
+    border-radius: 50%;
+}
+
 .footer-column input {
     width: 100%;
     padding: 10px;
