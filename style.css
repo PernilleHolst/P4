@@ -453,7 +453,8 @@ img {
 
 .social-links :hover {
     background-color: #972620;
-    border-radius: 50%;
+    transition: background-color 0.3s;
+    border-radius: 50%; /* Gør baggrunden rund */
 }
 
 .footer-column input {
