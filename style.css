@@ -794,6 +794,37 @@ p {
     }
 }
 
+/*Scroll-up knap*/
+.scroll-up {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 12px 20px;
+    background-color: rgba(151, 38, 32, 0.7); /* Faded */
+    color: white;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: background-color 0.3s, opacity 0.3s;
+    opacity: 0; /* Skjult som udgangspunkt */
+    visibility: hidden;
+    font-size: 18px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Vis knappen ved scroll */
+.scroll-up.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Hover-effekt */
+.scroll-up:hover {
+    background-color: rgba(151, 38, 32, 1); /* Mere synlig */
+}
+
+
+
 /* Footer */
 .footer {
     background-color: #fff;
