@@ -6,22 +6,334 @@ html, body {
     overflow: hidden; /* Forhindrer scrolling */
 }
 
+/* Antag at navbar er 80px høj */
+.navbar {
+    height: 80px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8); /* Semi-transparent */
+    z-index: 1000;
+}
+
 /* Forside sektion */
 .forside {
     width: 100%;
-    height: 100vh; /* Fylder hele skærmen */
+    height: 100vh; /* Fuld højde af skærmen */
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
+    padding-top: 100px; /* Skubber ned svarende til navbarens højde */
 }
 
-/* Billedet fylder hele skærmen */
+/* Forside billede */
 .forside-image {
     position: absolute;
-    top: 0;
+    top: 97px; /* Starter præcis under navbaren */
     left: 0;
     width: 100%;
-    height: 100%;
-    object-fit: cover; /* Sørger for at billedet dækker hele området */
+    height: calc(100vh - 80px); /* Trækker navbarens højde fra */
+    object-fit: cover; /* Fylder hele området uden forvrængning */
 }
+
+/* Navigation Bar */
+/* Generel styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/* Top-bar styling */
+.top-bar {
+    background-color: #972620;
+    padding: 1px 20px;
+    text-align: right;
+    padding-top: 3px;
+    margin-bottom: -3px;
+    border-top: 4px solid #972620;
+    border-bottom: 6px solid #972620;
+}
+
+.top-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+.top-links li {
+    display: inline;
+}
+
+.top-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.cart {
+    margin-right: 2%;
+    margin-left: 2%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+@media (max-width: 768px) {
+    .top-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .cart {
+        margin-right: 0;
+        margin-left: 0;
+        justify-content: center;
+    }
+
+    .top-links a {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .top-bar {
+        padding: 10px;
+    }
+
+    .top-links {
+        gap: 15px;
+    }
+
+    .top-links a {
+        font-size: 12px;
+    }
+}
+
+
+/* Navigation Bar */
+/* Generel styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/* Top-bar styling */
+.top-bar {
+    background-color: #972620;
+    padding: 1px 20px;
+    text-align: right;
+    padding-top: 3px;
+    margin-bottom: -3px;
+}
+
+.top-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+.top-links li {
+    display: inline;
+}
+
+.top-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.cart {
+    margin-right: 2%;
+    margin-left: 2%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+@media (max-width: 768px) {
+    .top-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .cart {
+        margin-right: 0;
+        margin-left: 0;
+        justify-content: center;
+    }
+
+    .top-links a {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .top-bar {
+        padding: 10px;
+    }
+
+    .top-links {
+        gap: 15px;
+    }
+
+    .top-links a {
+        font-size: 12px;
+    }
+}
+
+
+/* Hovednavigation */
+.main-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 2px 30px;
+    /* Reduceret højde */
+    border-bottom: 2px solid #fff;
+    padding-top: 10px;
+    margin-bottom: -4px;
+}
+
+/* Juster logoets størrelse */
+.logo img {
+    height: 50px;
+    /* Mindre logo */
+}
+
+/* Navigation links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+    /* Skubber navigationsteksten til højre */
+    margin-left: auto;
+    align-items: center;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 3px;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+    color: #972620;
+}
+
+
+/* Søgeikon + CTA-knap */
+.call-to-action {
+    margin-left: 3%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* CTA-knap flyttet til venstre for søgeikonet */
+.cta-button {
+    background-color: #972620;
+    color: white;
+    padding: 11px 18px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.cta-button:hover {
+    background-color: #257F88;
+    color: #fff;
+}
+
+/* Søgeikon */
+.search {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    padding-left: 7px;
+}
+
+.search:hover {
+    color: #972620;
+}
+
+
+@media (max-width: 768px) {
+    .main-nav {
+        flex-direction: column;
+        gap: 30px;
+
+    }
+
+    .nav-links {
+        flex-direction: column;
+        margin-left: 0;
+        text-align: center;
+    }
+
+    }
