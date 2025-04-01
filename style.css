@@ -140,17 +140,33 @@ body {
         font-size: 12px;
     }
 }
-
-
-/* Burger menu til venstre */
-.burger-menu {
-    font-size: 24px;
-    cursor: pointer;
-    order: 1;
-    /* Placerer burger-menuen først */
+/* Standard: top-links vises */
+.top-links {
+    display: flex;
+    gap: 15px;
+    list-style: none;
 }
 
-/*burger menu*/
+/* Når skærmen er lille (phone mode), skjules nav-links */
+@media screen and (max-width: 768px) {
+    .top-links {
+        display: none;
+    }
+}
+/* Standard: nav-link vises */
+.nav-links {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+}
+
+/* Når skærmen er lille (phone mode), skjules nav-links */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+}
+/* Standard: Menuen er skjult */
 .burger-menu-items {
     display: none;
     position: absolute;
@@ -165,25 +181,41 @@ body {
     opacity: 85%;
 }
 
+/* Når menuen er aktiv, vises den */
 .burger-menu-items.active {
     display: flex;
 }
 
-.burger-menu-items a {
-    padding: 10px;
-    display: block;
-    color: #000;
-    text-decoration: none;
-    font-family: 'Arial', sans-serif;
-    transition: background 0.3s;
+/* Burger-menuen vises kun i phone mode */
+@media screen and (max-width: 768px) {
+    .burger-menu {
+        display: block;
+        cursor: pointer;
+    }
+
+    .burger-menu-items {
+        display: none; /* Start skjult */
+    }
+
+    /* Når den er aktiv, vis den */
+    .burger-menu-items.active {
+        display: flex;
+    }
 }
 
-.burger-menu-items a:hover {
-    background: #ca7206;
-}
+/* Skjuler burger-menuen på større skærme */
+@media screen and (min-width: 769px) {
+    .burger-menu {
+        display: none;
+    }
 
-.burger-menu.active+.burger-menu-items {
-    display: flex;
+    .burger-menu-items {
+        display: flex; /* Hvis du vil have menuen synlig på desktop */
+        position: static; /* Fjerner absolut positionering */
+        background: none;
+        box-shadow: none;
+        flex-direction: row;
+    }
 }
 
 /* Hero Section */
