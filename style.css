@@ -193,14 +193,37 @@ body {
 
 
 /* Søgeikon + CTA-knap */
-.call-to-action {
-    margin-left: 3%;
-    display: flex;
-    align-items: center;
-    gap: 10px;
+/* Container til dropdown */
+.dropdown-menu {
+    display: none; /* Skjult som standard */
+    position: absolute;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    margin-top: 5px;
+    right: 0;
+    min-width: 200px;
+    z-index: 1000;
 }
 
-/* CTA-knap flyttet til venstre for søgeikonet */
+/* Links i dropdown */
+.dropdown-menu a {
+    display: block;
+    padding: 8px 12px;
+    color: #972620;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* Hover-effekt */
+.dropdown-menu a:hover {
+    background-color: #972620;
+    color: #fff;
+}
+
+/* CTA-knappen */
 .cta-button {
     background-color: #972620;
     color: white;
@@ -209,12 +232,15 @@ body {
     text-decoration: none;
     font-size: 14px;
     transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    position: relative;
 }
 
+/* CTA-knap hover */
 .cta-button:hover {
     background-color: #257F88;
     color: #fff;
 }
+
 
 /* Søgeikon */
 .search {
