@@ -88,7 +88,6 @@ body {
     display: flex;
     justify-content: flex-end;
     gap: 20px;
-
 }
 
 .top-links li {
@@ -109,6 +108,41 @@ body {
     align-items: center;
     gap: 10px;
 }
+
+/* Responsivitet til skærme mindre end 768px (f.eks. tablets og mobiltelefoner) */
+@media (max-width: 768px) {
+    .top-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .cart {
+        margin-right: 0;
+        margin-left: 0;
+        justify-content: center;
+    }
+
+    .top-links a {
+        font-size: 12px;
+    }
+}
+
+/* Responsivitet til meget små skærme (mobiltelefoner) under 480px */
+@media (max-width: 480px) {
+    .top-bar {
+        padding: 10px;
+    }
+
+    .top-links {
+        gap: 15px;
+    }
+
+    .top-links a {
+        font-size: 12px;
+    }
+}
+
 
 
 /* Burger menu til venstre */
