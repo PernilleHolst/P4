@@ -90,8 +90,9 @@ body {
     gap: 20px;
 }
 
+
 .top-links li {
-    display: inline;
+    gap: 10px;
 }
 
 .top-links a {
@@ -109,6 +110,7 @@ body {
     gap: 10px;
 }
 
+/* Responsivitet til skærme mindre end 768px (f.eks. tablets og mobiltelefoner) */
 @media (max-width: 768px) {
     .top-links {
         flex-direction: column;
@@ -127,6 +129,7 @@ body {
     }
 }
 
+/* Responsivitet til meget små skærme (mobiltelefoner) under 480px */
 @media (max-width: 480px) {
     .top-bar {
         padding: 10px;
@@ -141,84 +144,6 @@ body {
     }
 }
 
-/* Standard: top-links vises */
-/*.top-links {
-    display: flex;
-    gap: 15px;
-    list-style: none;
-}
-
-/* Når skærmen er lille (phone mode), skjules nav-links */
-/*@media screen and (max-width: 768px) {
-    .top-links {
-        display: none;
-    }
-}
-/* Standard: nav-link vises */
-/*.nav-links {
-    display: flex;
-    gap: 15px;
-    list-style: none;
-}
-
-/* Når skærmen er lille (phone mode), skjules nav-links */
-/*@media screen and (max-width: 768px) {
-    .nav-links {
-        display: none;
-    }
-}
-
-/* Standard: Menuen er skjult */
-/*.burger-menu-items {
-    display: none;
-    position: absolute;
-    top: 60px;
-    left: 10px;
-    background: #f8f400;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    width: 200px;
-    flex-direction: column;
-    z-index: 1000;
-    opacity: 85%;
-}*/
-
-/* Når menuen er aktiv, vises den */
-.burger-menu-items.active {
-    display: flex;
-}
-
-/* Burger-menuen vises kun i phone mode */
-@media screen and (max-width: 768px) {
-    .burger-menu {
-        display: block;
-        cursor: pointer;
-    }
-
-    .burger-menu-items {
-        display: none; /* Start skjult */
-    }
-
-    /* Når den er aktiv, vis den */
-    .burger-menu-items.active {
-        display: flex;
-    }
-}
-
-/* Skjuler burger-menuen på større skærme */
-@media screen and (min-width: 769px) {
-    .burger-menu {
-        display: none;
-    }
-
-    .burger-menu-items {
-        display: flex; /* Hvis du vil have menuen synlig på desktop */
-        position: static; /* Fjerner absolut positionering */
-        background: none;
-        box-shadow: none;
-        flex-direction: row;
-    }
-}
 
 /* Hero Section */
 .hero {
