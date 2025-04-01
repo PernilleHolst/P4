@@ -419,21 +419,25 @@ body {
     text-align: left;
 }
 
+/* Container med lidt padding for bedre responsivitet */
 .container {
     width: 100%;
     margin: 0 auto;
     max-width: 1200px;
     margin-bottom: 80px;
+    padding: 0 20px; /* Sørger for, at indhold ikke klæber til skærmkanten */
 }
 
+/* Flexbox layout til kolonner */
 .support-columns {
     margin-top: 100px;
     display: flex;
     gap: 40px;
     justify-content: center;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* Sikrer, at kolonnerne ikke går udenfor skærmen */
 }
 
+/* Styling af individuelle kolonner */
 .column {
     flex: 1;
     max-width: 350px;
@@ -445,6 +449,55 @@ body {
     display: flex;
     flex-direction: column;
 }
+
+/* RESPONSIVITET */
+
+/* Tablets og mellemstore skærme (max 1024px) */
+@media (max-width: 800px) {
+    .support-section h5 {
+        font-size: 36px; /* Mindre overskrift */
+        text-align: center; /* Centrer overskrift */
+    }
+
+    .support-columns {
+        gap: 20px; /* Mindre afstand mellem kolonner */
+    }
+
+    .column {
+        max-width: 300px; /* Mindre bredde på kolonner */
+        padding: 20px; /* Reduceret padding */
+    }
+}
+
+/* Mobiltelefoner (max 768px) */
+@media (max-width: 768px) {
+    .support-section h5 {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    .support-columns {
+        flex-direction: column; /* Kolonner stables vertikalt */
+        align-items: center;
+    }
+
+    .column {
+        max-width: 90%; /* Gør kolonner bredere på små skærme */
+        padding: 15px;
+    }
+}
+
+/* Meget små skærme (max 480px) */
+@media (max-width: 480px) {
+    .support-section h5 {
+        font-size: 24px;
+    }
+
+    .column {
+        padding: 10px;
+    }
+}
+
 
 .column img {
     width: 100%;
