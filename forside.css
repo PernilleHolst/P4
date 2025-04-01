@@ -1,0 +1,27 @@
+/* Fjern scrolling */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden; /* Forhindrer scrolling */
+}
+
+/* Forside sektion */
+.forside {
+    width: 100%;
+    height: 100vh; /* Fylder hele skærmen */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/* Billedet fylder hele skærmen */
+.forside-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Sørger for at billedet dækker hele området */
+}
