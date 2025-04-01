@@ -111,6 +111,50 @@ body {
 }
 
 
+/* Burger menu til venstre */
+.burger-menu {
+    font-size: 24px;
+    cursor: pointer;
+    order: 1;
+    /* Placerer burger-menuen først */
+}
+
+/*burger menu*/
+.burger-menu-items {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 10px;
+    background: #f8f400;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 200px;
+    flex-direction: column;
+    z-index: 1000;
+    opacity: 85%;
+}
+
+.burger-menu-items.active {
+    display: flex;
+}
+
+.burger-menu-items a {
+    padding: 10px;
+    display: block;
+    color: #000;
+    text-decoration: none;
+    font-family: 'Arial', sans-serif;
+    transition: background 0.3s;
+}
+
+.burger-menu-items a:hover {
+    background: #ca7206;
+}
+
+.burger-menu.active+.burger-menu-items {
+    display: flex;
+}
+
 /* Hero Section */
 .hero {
     .hero {
