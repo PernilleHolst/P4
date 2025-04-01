@@ -334,6 +334,37 @@ body {
     border-top-right-radius: 15px;
 }
 
+/* Video-container der holder video og knap */
+.video-container {
+    position: relative;
+    display: inline-block;
+}
+
+/* Runde play/pause knap */
+.video-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent baggrund */
+    color: white;
+    border: none;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%; /* Gør knappen rund */
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+/* Effekt når man holder musen over knappen */
+.video-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
 .content {
     padding: 20px;
 }

@@ -103,9 +103,29 @@
                     </div>
                 </div>
                 <div class="column">
-                    <video width="600" autoplay loop muted>
-                        <source src="videos/maui.mp4" type="video/mp4" class="video">
-                    </video>
+                    <div class="video-container">
+                        <video id="myVideo" width="600">
+                            <source src="videos/maui.mp4" type="video/mp4">
+                        </video>
+                        <button id="videoBtn" class="video-btn" onclick="toggleVideo()">▶</button>
+                    </div>
+                    
+                    <script>
+                        var video = document.getElementById("myVideo");
+                        var btn = document.getElementById("videoBtn");
+                    
+                        function toggleVideo() {
+                            if (video.paused) {
+                                video.play();
+                                btn.innerHTML = "⏸"; // Skift til pause-ikon
+                            } else {
+                                video.pause();
+                                btn.innerHTML = "▶"; // Skift til play-ikon
+                            }
+                        }
+                    </script>
+
+                    
                     <div class="content">
                         <h3>Katten Maui</h3>
                         <p>Katten Maui bla bla bla bla bla</p>
