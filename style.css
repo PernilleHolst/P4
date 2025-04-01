@@ -535,6 +535,13 @@ p {
 
 }
 
+/* Frivillig tekst - venstre side */
+.frivillig_beskrivelse-titel {
+    font-weight: bold;
+    font-size: 1rem;
+    margin-bottom: 0px;
+}
+
 /* Formularboks - højre side */
 .form-box {
     flex: 1;
