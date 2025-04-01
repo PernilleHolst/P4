@@ -794,7 +794,8 @@ p {
     }
 }
 
-/*Scroll-up knap*/
+
+/*Scroll up knap*/
 .scroll-up {
     position: fixed;
     bottom: 20px;
@@ -822,6 +823,7 @@ p {
 .scroll-up:hover {
     background-color: rgba(151, 38, 32, 1); /* Mere synlig */
 }
+
 
 
 
