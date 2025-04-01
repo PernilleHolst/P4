@@ -453,25 +453,23 @@ body {
 }
 
 /* RESPONSIVITET */
-
-/* Tablets og mellemstore skærme (max 1024px) */
-@media (max-width: 800px) {
+@media (max-width: 1024px) {
     .support-section h5 {
-        font-size: 36px; /* Mindre overskrift */
-        text-align: center; /* Centrer overskrift */
+        font-size: 28px;
+        text-align: center;
     }
 
     .support-columns {
-        gap: 20px; /* Mindre afstand mellem kolonner */
+        flex-direction: column;
+        align-items: center;
     }
 
     .column {
-        max-width: 300px; /* Mindre bredde på kolonner */
-        padding: 20px; /* Reduceret padding */
+        max-width: 90%;
+        padding: 15px;
     }
 }
 
-/* Mobiltelefoner (max 768px) */
 @media (max-width: 768px) {
     .support-section h5 {
         font-size: 28px;
@@ -479,17 +477,16 @@ body {
     }
 
     .support-columns {
-        flex-direction: column; /* Kolonner stables vertikalt */
+        flex-direction: column;
         align-items: center;
     }
 
     .column {
-        max-width: 90%; /* Gør kolonner bredere på små skærme */
+        max-width: 90%;
         padding: 15px;
     }
 }
 
-/* Meget små skærme (max 480px) */
 @media (max-width: 480px) {
     .support-section h5 {
         font-size: 24px;
@@ -811,6 +808,7 @@ p {
     justify-content: center;
     align-items: flex-start;
     gap: 40px;
+    flex-wrap: wrap;
 }
 
 .footer-columns {
@@ -913,7 +911,7 @@ p {
 }
 
 /* Responsive Design */
-@media (max-width: 992px) {
+@media (max-width: 1024px) {
     .support-columns {
         flex-direction: column;
     }
@@ -934,28 +932,84 @@ p {
         height: auto;
         padding: 60px 0;
     }
+
+    .social-links {
+        justify-content: center;
+    }
 }
 
 @media (max-width: 768px) {
-    .navbar .container {
-        flex-direction: column;
-    }
-
-    .nav-links {
-        margin-top: 20px;
-    }
-
-    .nav-links li {
-        margin: 0 10px;
-    }
-
     .footer-content {
+        flex-direction: column; /* Sørger for at kolonnerne stables vertikalt */
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-columns {
         flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-left,
+    .footer-right {
+        flex-direction: column;
+        gap: 20px;
+        margin: 0;
     }
 
     .footer-column {
-        margin-bottom: 30px;
+        width: 90%; /* Gør kolonner bredere */
+        padding: 0;
+        min-width: unset;
     }
+
+    .footer-divider {
+        display: none; /* Fjerner divideren for at spare plads */
+    }
+}
+
+@media (max-width: 480px) {
+    .footer {
+        padding: 40px 0 10px;
+    }
+
+    .footer-column h4 {
+        font-size: 18px;
+    }
+
+    .footer-column a {
+        font-size: 14px;
+    }
+
+    .social-links img {
+        width: 25px;
+        height: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer {
+        padding: 40px 0 10px;
+    }
+    
+    .footer-divider {
+        display: none;
+    }
+
+    .footer-column h4 {
+        font-size: 18px;
+    }
+
+    .footer-column a {
+        font-size: 14px;
+    }
+
+    .social-links img {
+        width: 25px;
+        height: 25px;
+    }
+
+    
 }
 
 @media (max-width: 768px) {
