@@ -140,34 +140,36 @@ body {
         font-size: 12px;
     }
 }
+
 /* Standard: top-links vises */
-.top-links {
+/*.top-links {
     display: flex;
     gap: 15px;
     list-style: none;
 }
 
 /* Når skærmen er lille (phone mode), skjules nav-links */
-@media screen and (max-width: 768px) {
+/*@media screen and (max-width: 768px) {
     .top-links {
         display: none;
     }
 }
 /* Standard: nav-link vises */
-.nav-links {
+/*.nav-links {
     display: flex;
     gap: 15px;
     list-style: none;
 }
 
 /* Når skærmen er lille (phone mode), skjules nav-links */
-@media screen and (max-width: 768px) {
+/*@media screen and (max-width: 768px) {
     .nav-links {
         display: none;
     }
 }
+
 /* Standard: Menuen er skjult */
-.burger-menu-items {
+/*.burger-menu-items {
     display: none;
     position: absolute;
     top: 60px;
@@ -179,7 +181,7 @@ body {
     flex-direction: column;
     z-index: 1000;
     opacity: 85%;
-}
+}*/
 
 /* Når menuen er aktiv, vises den */
 .burger-menu-items.active {
