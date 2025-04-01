@@ -128,7 +128,6 @@ body {
     }
 }
 
-/* Responsivitet til meget små skærme (mobiltelefoner) under 480px */
 @media (max-width: 480px) {
     .top-bar {
         padding: 10px;
@@ -142,7 +141,6 @@ body {
         font-size: 12px;
     }
 }
-
 
 
 /* Burger menu til venstre */
