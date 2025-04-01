@@ -109,7 +109,6 @@ body {
     gap: 10px;
 }
 
-/* Responsivitet til skærme mindre end 768px (f.eks. tablets og mobiltelefoner) */
 @media (max-width: 768px) {
     .top-links {
         flex-direction: column;
