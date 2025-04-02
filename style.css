@@ -798,7 +798,7 @@ img{
     margin: auto;
 }
 
-/*style for previous and next buttoms
+style for previous and next buttoms
 .prev, .next{
     cursor: pointer;
     position: absolute;
@@ -817,30 +817,15 @@ img{
     right: 0;
     border-radius: 3px 0 0 3px;
 }
+
 .prev:hover, .next:hover{
     background-color: rgba(0,0,0,8);
-} */
-
-.text{
-    color: beige;
-    font-size: 15px;
-    padding: 8px 12px;
-    position: absolute;
-    width: 100%;
-    text-align: center;
-    bottom: 100px;
 }
 
-/*style for number text
-.numbertext{
-    color: antiquewhite;
-    font-size: 12px;
-    padding: 8px 12px;
-    position: absolute;
-    top: 0;
-} */
 
-/*style for dots
+
+
+style for dots
 .dot{
     cursor: pointer;
     height: 15px;
@@ -854,7 +839,7 @@ img{
 
 .active, .dot:hover{
     background-color: blueviolet;
-} */
+}
 
 
 .fade{
