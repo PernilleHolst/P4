@@ -764,26 +764,21 @@ p {
     gap: 50px;
 }
 
-/* .maui-image {
+.maui-image {
     flex: 1;
-} */
+}
 
 .maui-text {
     flex: 1;
 }
 
-/* .maui-image img {
+.maui-image img {
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-} */
+}
 
 
-*{
-    box-sizing: border-box;
-}
-body{
-    font-family: verdana, sans-serif;
-}
+/* SLIDESHOW */
 .mySlides{
     display: none;
 }
@@ -793,7 +788,7 @@ img{
 
 /*tilføj maks højde?*/
 .slideshow-container{
-    max-width: 80%;
+    /* max-width: 80%; */
     position: relative;
     margin: auto;
 }
@@ -818,11 +813,14 @@ style for previous and next buttoms
     border-radius: 3px 0 0 3px;
 }
 
+.prev{
+    left: 0;
+    border-radius: 0 3px 3px 0;
+}
+
 .prev:hover, .next:hover{
     background-color: rgba(0,0,0,8);
 }
-
-
 
 
 style for dots
@@ -860,7 +858,7 @@ style for dots
 
 /*responsive*/
 @media only screen and (max-width:300px){
-    .prev, .next, .text{
+    .prev, .next{
         font-size: 11px;
     }
     .dot{
@@ -870,7 +868,7 @@ style for dots
 }
 
 @media only screen and (max-width:500px){
-    .prev, .next, .text{
+    .prev, .next{
         font-size: 14px;
     }
 }

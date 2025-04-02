@@ -16,3 +16,6 @@ function showSlides() {
     setTimeout(showSlides, 5000); 
     //change image every 5 seconds
 }
+
+
+//indsæt dots funktion
