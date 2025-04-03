@@ -192,7 +192,6 @@ body {
 }
 
 
-/* Søgeikon + CTA-knap */
 /* Container til dropdown */
 .dropdown-menu {
     display: none; /* Skjult som standard */
@@ -239,6 +238,22 @@ body {
 .cta-button:hover {
     background-color: #257F88;
     color: #fff;
+}
+
+.cta-button::after {
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"><path d="M0,3 L5,8 L10,3" fill="%23ffffff"/></svg>');
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-left: 8px;
+    transition: transform 0.3s;
+}
+
+.cta-button.active::after {
+    transform: rotate(180deg);
 }
 
 
@@ -364,6 +379,16 @@ body {
         display: flex;
         align-items: center;
     }
+}
+
+.page-title {
+    position: absolute;
+    top: 140px;
+    left: 30px;
+    font-size: 46px;
+    font-weight: bold;
+    color: #fff;
+
 }
 
 .hero-content {
@@ -1271,4 +1296,12 @@ img{
         height: auto;
         padding: 50px 0;
     }
+}
+
+.forside-image {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    margin-bottom: 40px;
 }
