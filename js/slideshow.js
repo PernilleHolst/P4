@@ -1,21 +1,53 @@
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+    showSlides (slideIndex += n);
+}
+
+function currentSlide(n) {
+    showSlides (slideIndex = n);
+}
+
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName(dots);
+    if (n > slides.length) { slideIndex = 1 }
+    if (n < 1) { slideIndex = n }
+
+   for (i = 0; i < slides.length; i++) {
+        slides [i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active")
+    }
+    Slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " active"; 
+}
+
+
 //Auto slide
 var slideIndex = 0;
 showSlides();
 
 function showSlides() {
     var i;
-    var slides = document.getElementsByClassName("mySlides");
-    for (i = 0; i < slides.length; i++) {
+    var slides = document.getElementsByClassName ("mySlides");
+    for (i=0; i < slides.length; i++) {
         slides [i].style.display = "none";
     }
+
     slideIndex++;
     if (slideIndex > slides.length) {
         slideIndex = 1
     }
     slides[slideIndex - 1].style.display = "block";
-    setTimeout(showSlides, 5000); 
-    //change image every 5 seconds
+    setTimeout(showSlides, 6000); 
+    //change image every 6 seconds
 }
 
+    
 
-//indsæt dots funktion
+
