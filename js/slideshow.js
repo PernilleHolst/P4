@@ -1,4 +1,4 @@
-
+//dots and prev, next
 var slideIndex = 1;
 showSlides(slideIndex);
 
