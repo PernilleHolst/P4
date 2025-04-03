@@ -383,14 +383,12 @@ body {
 
 .page-title {
     position: absolute;
-    top: 150px;
+    top: 140px;
     left: 30px;
-    font-size: 30px;
+    font-size: 46px;
     font-weight: bold;
-    color: #972620; /* Rød farve */
-    background-color: rgba(255, 255, 255, 0.807);
-    padding: 3px 6px;
-    border-radius: 5px;
+    color: #fff;
+
 }
 
 .hero-content {
