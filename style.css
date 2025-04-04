@@ -365,11 +365,12 @@ body {
     top: 60px;
     left: 0;
     width: 250px;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
     z-index: 1000;
     padding: 10px 0;
+    opacity: 95%;
 }
 
 /* Rød top-bar i burger-menu */
@@ -378,20 +379,23 @@ body {
     padding: 10px;
 }
 
+/* Burger-menu indhold */
 .burger-top-links {
     list-style: none;
     padding: 0;
     margin: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
+}
+
+.burger-top-links li {
+    padding: 10px;
+    text-align: center;
 }
 
 .burger-top-links a {
-    color: white;
     text-decoration: none;
-    font-size: 14px;
+    color: black;
+    font-size: 16px;
+    display: block;
 }
 
 /* Burger-menu indhold */
@@ -404,7 +408,8 @@ body {
 .burger-links li {
     padding: 10px;
     text-align: center;
-    border-bottom: 1px solid #ddd;
+    /*border-bottom: 1px solid #ddd;*/
+    /*line under text*/
 }
 
 .burger-links a {
@@ -415,12 +420,14 @@ body {
 }
 
 /* Hover-effekt til burger-links */
+/*white menu*/
 .burger-links a:hover {
     background-color: #972620;
     color: #ffffff;
     transition: 0.3s;
 }
 
+/*red menu*/
 .burger-top-links a:hover {
     background-color: #ffffff;
     color: #000000;
@@ -459,6 +466,7 @@ body {
         display: none;
     }
 }
+
 
 /* Hero Section */
 .hero {
