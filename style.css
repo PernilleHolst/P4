@@ -414,6 +414,19 @@ body {
     display: block;
 }
 
+/* Hover-effekt til burger-links */
+.burger-links a:hover {
+    background-color: #972620;
+    color: #ffffff;
+    transition: 0.3s;
+}
+
+.burger-top-links a:hover {
+    background-color: #ffffff;
+    color: #000000;
+    transition: 0.3s;
+}
+
 /* Åbner burger-menu */
 .burger-menu.open span:nth-child(1) {
     transform: translateY(8px) rotate(45deg);
