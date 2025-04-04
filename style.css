@@ -370,13 +370,12 @@ body {
     border-radius: 5px;
     z-index: 1000;
     padding: 10px 0;
-    opacity: 95%;
+    opacity: 98%;
 }
 
 /* Rød top-bar i burger-menu */
 .burger-top-bar {
     background-color: #972620;
-    padding: 10px;
 }
 
 /* Burger-menu indhold */
