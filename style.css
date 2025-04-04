@@ -251,6 +251,7 @@ body {
 }
 
 
+
 /* Søgeikon */
 .search {
     text-decoration: none;
@@ -373,12 +374,12 @@ body {
     opacity: 98%;
 }
 
-/* Rød top-bar i burger-menu */
+/* top-bar i burger-menu */
 .burger-top-bar {
     background-color: #972620;
 }
 
-/* Burger-menu indhold */
+/* red Burger-menu indhold */
 .burger-top-links {
     list-style: none;
     padding: 0;
@@ -397,7 +398,7 @@ body {
     display: block;
 }
 
-/* Burger-menu indhold */
+/* white Burger-menu indhold */
 .burger-links {
     list-style: none;
     padding: 0;
