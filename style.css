@@ -454,6 +454,7 @@ body {
     background-color: #972620;
     color: #ffffff;
     transition: 0.3s;
+    border-radius: 5px;
 }
 
 /*red menu*/
@@ -461,6 +462,7 @@ body {
     background-color: #ffffff;
     color: #000000;
     transition: 0.3s;
+    border-radius: 5px;
 }
 
 /* Åbner burger-menu */
