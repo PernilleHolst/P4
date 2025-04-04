@@ -322,6 +322,35 @@ body {
 
 }
 
+/* Burger-menu logo */
+.burger-logo {
+    display: none;
+    /* Hide by default */
+}
+
+@media (max-width: 768px) {
+    .burger-logo {
+        display: block;
+        /* Only show on mobile */
+    }
+}
+
+@media (max-width: 768px) {
+    .burger-logo img {
+        height: 40px;
+        /* Adjust size as needed */
+        margin-left: 20px;
+        /* Space between burger icon and logo */
+    }
+
+    .burger-menu-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 20px;
+    }
+}
+
 /* Burger-menu styling */
 .burger-menu-container {
     display: none;
