@@ -194,7 +194,8 @@ body {
 
 /* Container til dropdown */
 .dropdown-menu {
-    display: none; /* Skjult som standard */
+    display: none;
+    /* Skjult som standard */
     position: absolute;
     background-color: white;
     border: 1px solid #ddd;
@@ -287,84 +288,119 @@ body {
 
 }
 
-/* Standard: top-links vises */
-/*.top-links {
+/* Generel styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigation styling */
+.main-nav {
     display: flex;
-    gap: 15px;
-    list-style: none;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    padding: 15px;
 }
 
-/* Når skærmen er lille (phone mode), skjules nav-links */
-/*@media screen and (max-width: 768px) {
-    .top-links {
-        display: none;
-    }
-}
-/* Standard: nav-link vises */
-/*.nav-links {
-    display: flex;
-    gap: 15px;
-    list-style: none;
+/* Logo */
+.logo img {
+    height: 50px;
 }
 
-/* Når skærmen er lille (phone mode), skjules nav-links */
-/*@media screen and (max-width: 768px) {
-    .nav-links {
-        display: none;
-    }
+/* Burger-menu ikon */
+.burger-menu {
+    font-size: 40px;
+    cursor: pointer;
+    display: none; /* Skjules som standard */
 }
 
-/* Standard: Menuen er skjult */
-/*.burger-menu-items {
+/* Menu-indhold */
+.burger-menu-items {
     display: none;
     position: absolute;
     top: 60px;
-    left: 10px;
-    background: #f8f400;
+    right: 10px;
+    background: #ffffff;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     width: 200px;
     flex-direction: column;
     z-index: 1000;
     opacity: 85%;
-}*/
-
-/* Når menuen er aktiv, vises den */
-.burger-menu-items.active {
-    display: flex;
 }
 
-/* Burger-menuen vises kun i phone mode */
+/* Når menuen er aktiv */
+.burger-menu-items.active {
+    display: flex !important;
+}
+
+/* Links styling */
+.burger-menu-items ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.burger-menu-items a {
+    padding: 10px;
+    display: block;
+    color: #000;
+    text-decoration: none;
+    font-family: 'Arial', sans-serif;
+    transition: background 0.3s;
+}
+
+.burger-menu-items a:hover {
+    background: #ca1606;
+}
+
+/* Navigation links (desktop) */
+.nav-links {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+}
+
+/* Skjuler .nav-links i mobilvisning */
 @media screen and (max-width: 768px) {
     .burger-menu {
-        display: block;
-        cursor: pointer;
+        display: block; /* Vises kun i mobil */
     }
 
     .burger-menu-items {
-        display: none; /* Start skjult */
+        display: flex; /* Starter skjult */
     }
 
-    /* Når den er aktiv, vis den */
     .burger-menu-items.active {
         display: flex;
     }
+
+    /* Skjul de normale navigation links på små skærme */
+    .nav-links {
+        display: none;
+    }
+     .top-links {
+        display: none;
+    }
 }
 
-/* Skjuler burger-menuen på større skærme */
+/* Desktop visning */
 @media screen and (min-width: 769px) {
     .burger-menu {
         display: none;
     }
 
     .burger-menu-items {
-        display: flex; /* Hvis du vil have menuen synlig på desktop */
-        position: static; /* Fjerner absolut positionering */
+        display: none;
+        position: static;
         background: none;
         box-shadow: none;
         flex-direction: row;
     }
 }
+
 
 /* Hero Section */
 .hero {
@@ -402,7 +438,7 @@ body {
     width: 100%;
     height: auto;
     margin-bottom: 40px;
-    
+
 }
 
 .hero h1 {
@@ -564,7 +600,8 @@ body {
     margin: 0 auto;
     max-width: 1200px;
     margin-bottom: 80px;
-    padding: 0 20px; /* Sørger for, at indhold ikke klæber til skærmkanten */
+    padding: 0 20px;
+    /* Sørger for, at indhold ikke klæber til skærmkanten */
 }
 
 /* Flexbox layout til kolonner */
@@ -573,7 +610,8 @@ body {
     display: flex;
     gap: 40px;
     justify-content: center;
-    flex-wrap: wrap; /* Sikrer, at kolonnerne ikke går udenfor skærmen */
+    flex-wrap: wrap;
+    /* Sikrer, at kolonnerne ikke går udenfor skærmen */
 }
 
 /* Styling af individuelle kolonner */
@@ -785,22 +823,24 @@ p {
 
 
 /* SLIDESHOW */
-.mySlides{
+.mySlides {
     display: none;
 }
-img{
+
+img {
     vertical-align: middle;
 }
 
 /*tilføj maks højde?*/
-.slideshow-container{
+.slideshow-container {
     /* max-width: 80%; */
     position: relative;
     margin: auto;
 }
 
 /* style for previous and next buttoms */
-.prev, .next{
+.prev,
+.next {
     cursor: pointer;
     position: absolute;
     top: 50%;
@@ -814,23 +854,25 @@ img{
     border-radius: 0 3px 3px 0;
     user-select: none;
 }
-.next{
+
+.next {
     right: 0;
     border-radius: 3px 0 0 3px;
 }
 
-.prev{
+.prev {
     left: 0;
     border-radius: 0 3px 3px 0;
 }
 
-.prev:hover, .next:hover{
+.prev:hover,
+.next:hover {
     background-color: #C5DFE2;
 }
 
 
 /* style for dots */
-.dot{
+.dot {
     cursor: pointer;
     height: 10px;
     width: 10px;
@@ -841,40 +883,57 @@ img{
     transition: background-color 0.6s ease;
 }
 
-.active, .dot:hover{
+.active,
+.dot:hover {
     background-color: #972620;
 }
 
 
-.fade{
+.fade {
     -webkit-animation-name: fade;
     -webkit-animation-duration: 3s;
     animation-name: fade;
     animation-duration: 3s;
 }
 
-@-webkit-keyframes fade{
-    from {opacity: .9;}
-    to{opacity: 1.5;}
+@-webkit-keyframes fade {
+    from {
+        opacity: .9;
+    }
+
+    to {
+        opacity: 1.5;
+    }
 }
-@keyframes fade{
-    from {opacity: .9;}
-    to{opacity: 1.5;}
+
+@keyframes fade {
+    from {
+        opacity: .9;
+    }
+
+    to {
+        opacity: 1.5;
+    }
 }
 
 /*responsive*/
-@media only screen and (max-width:480px){
-    .prev, .next{
+@media only screen and (max-width:480px) {
+
+    .prev,
+    .next {
         font-size: 11px;
     }
-    .dot{
+
+    .dot {
         height: 7px;
         width: 7px;
     }
 }
 
-@media only screen and (max-width:768px){
-    .prev, .next{
+@media only screen and (max-width:768px) {
+
+    .prev,
+    .next {
         font-size: 14px;
     }
 }
@@ -1040,13 +1099,15 @@ img{
     bottom: 20px;
     right: 20px;
     padding: 12px 20px;
-    background-color: rgba(151, 38, 32, 0.7); /* Faded */
+    background-color: rgba(151, 38, 32, 0.7);
+    /* Faded */
     color: white;
     border: none;
     border-radius: 7px;
     cursor: pointer;
     transition: background-color 0.3s, opacity 0.3s;
-    opacity: 0; /* Skjult som udgangspunkt */
+    opacity: 0;
+    /* Skjult som udgangspunkt */
     visibility: hidden;
     font-size: 18px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -1060,7 +1121,8 @@ img{
 
 /* Hover-effekt */
 .scroll-up:hover {
-    background-color: rgba(151, 38, 32, 1); /* Mere synlig */
+    background-color: rgba(151, 38, 32, 1);
+    /* Mere synlig */
 }
 
 
@@ -1212,7 +1274,8 @@ img{
 
 @media (max-width: 768px) {
     .footer-content {
-        flex-direction: column; /* Sørger for at kolonnerne stables vertikalt */
+        flex-direction: column;
+        /* Sørger for at kolonnerne stables vertikalt */
         align-items: center;
         text-align: center;
     }
@@ -1230,13 +1293,15 @@ img{
     }
 
     .footer-column {
-        width: 90%; /* Gør kolonner bredere */
+        width: 90%;
+        /* Gør kolonner bredere */
         padding: 0;
         min-width: unset;
     }
 
     .footer-divider {
-        display: none; /* Fjerner divideren for at spare plads */
+        display: none;
+        /* Fjerner divideren for at spare plads */
     }
 }
 
@@ -1263,7 +1328,7 @@ img{
     .footer {
         padding: 40px 0 10px;
     }
-    
+
     .footer-divider {
         display: none;
     }
@@ -1281,7 +1346,7 @@ img{
         height: 25px;
     }
 
-    
+
 }
 
 @media (max-width: 768px) {
