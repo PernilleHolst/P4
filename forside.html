@@ -1,12 +1,21 @@
 <!DOCTYPE html>
 <html lang="da">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inges-kattehjem Underside</title>
     <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" defer src="script.js"></script>
+    <script type="text/javascript" defer src="js/donations.js"></script>
+    <script type="text/javascript" defer src="js/scroll-up-knap.js"></script>
     <script type="text/javascript" defer src="js/dropdown-menu.js"></script>
-    <title>Forside</title>
+    <script type="text/javascript" defer src="js/slideshow.js"></script>
+    <script defer src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script defer src="js/burger-menu.js"></script>
+    <!--script type="text/javascript" defer src="js/burger-menu.js"></script-->
 </head>
+
 
 <body>
     <nav class="navbar">
@@ -27,7 +36,7 @@
             <a href="forside.html" class="logo">
                 <img src="images/ingeskattehjem_logo_v2.png" alt="Inges Kattehjem Logo">
             </a>
-        <div class="burger-menu-items">
+        <div class="nav-right">
             <ul class="nav-links">
                 <li><a href="#">Adoptér en kat</a></li>
                 <li><a href="#">Kattepension</a></li>
@@ -36,19 +45,39 @@
                 <li><a href="#">Katteleksikon</a></li>
                 <li><a href="#">Nyhederne</a></li>
             </ul>
-        </div>
-        <div class="call-to-action">
-            <a href="#" class="cta-button" id="ctaButton">STØT OS</a>
-            <div class="dropdown-menu" id="dropdownMenu">
-                <a href="#">Shop hos Katteloppen</a>
-                <a href="#">Bliv plejefamilie</a>
-                <a href="#">Bliv sponsor</a>
-                <a href="#">Testamente & legat</a>
-                <a href="index.html">Bliv frivillig/Donér</a>
+            <div class="call-to-action">
+                <a href="#" class="cta-button" id="ctaButton">STØT OS</a>
+                <div class="dropdown-menu" id="dropdownMenu">
+                    <a href="#">Shop hos Katteloppen</a>
+                    <a href="#">Bliv plejefamilie</a>
+                    <a href="#">Bliv sponsor</a>
+                    <a href="#">Testamente & legat</a>
+                    <a href="index.html">Bliv frivillig/Donér</a>
+                </div>
+                <a href="#" class="search"> &#x1F50E;</a>
             </div>
-            <a href="#" class="search"> &#x1F50E;</a>
         </div>
         </div>
+        </div>
+        <div class="burger-menu-container">
+            <div class="burger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        
+        <div class="burger-menu-content">
+            <ul class="burger-links">
+                <li><a href="#">Dansk Katteregister</a></li>
+                <li><a href="#">Om Inges Kattehjem</a></li>
+                <li><a href="#">Webshop</a></li>
+                <li><a href="#">Dyreværn</a></li>
+                <li><a href="#">Lovgivning</a></li>
+                <li><a href="#">Kontakt</a></li>
+                <li class="cart"><a href="#">🛒 0 Emner</a></li>
+            </ul>
+        </div>        
     </nav>
 
     <section class="forside">

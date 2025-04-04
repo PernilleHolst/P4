@@ -153,6 +153,7 @@ body {
     border-bottom: 2px solid #ddd;
     padding-top: 10px;
     margin-bottom: -4px;
+    
 }
 
 /* Juster logoets størrelse */
@@ -161,16 +162,22 @@ body {
     /* Mindre logo */
 }
 
+.nav-right {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centrerer nav-links */
+    width: 100%;
+    position: relative;
+}
+
 /* Navigation links */
 .nav-links {
     list-style: none;
     display: flex;
     gap: 20px;
     padding: 0;
-    margin: 0;
-    /* Skubber navigationsteksten til højre */
-    margin-left: auto;
-    align-items: center;
+    margin: 0 auto; /* Holder den centreret */
+    margin-left: 30%;
 }
 
 .nav-links li {
@@ -185,42 +192,21 @@ body {
     text-transform: uppercase;
     padding: 3px;
     transition: color 0.3s ease-in-out;
+    margin-left: auto;
+    margin-right: 0;
+    max-width: 1200px;
 }
 
 .nav-links a:hover {
     color: #972620;
 }
 
-
-/* Container til dropdown */
-.dropdown-menu {
-    display: none;
-    /* Skjult som standard */
-    position: absolute;
-    background-color: white;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 10px;
-    margin-top: 5px;
-    right: 0;
-    min-width: 200px;
-    z-index: 1000;
-}
-
-/* Links i dropdown */
-.dropdown-menu a {
-    display: block;
-    padding: 8px 12px;
-    color: #972620;
-    text-decoration: none;
-    font-size: 14px;
-}
-
-/* Hover-effekt */
-.dropdown-menu a:hover {
-    background-color: #972620;
-    color: #fff;
+.call-to-action {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Afstand mellem CTA-knap og søgeikon */
+    margin-left: auto; /* Skubber CTA-knappen mod højre */
 }
 
 /* CTA-knappen */
@@ -233,6 +219,9 @@ body {
     font-size: 14px;
     transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
     position: relative;
+    display: flex;
+    align-items: center;
+    gap: 15px;
 }
 
 /* CTA-knap hover */
@@ -264,141 +253,43 @@ body {
     color: #333;
     font-size: 16px;
     padding-left: 7px;
+    
 }
 
 .search:hover {
     color: #972620;
 }
 
-
-@media (max-width: 768px) {
-    .main-nav {
-        flex-direction: column;
-        gap: 30px;
-
-    }
-
-    .nav-links {
-        flex-direction: column;
-        margin-left: 0;
-        text-align: center;
-    }
-
-
-
-}
-
-/* Generel styling */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
-/* Navigation styling */
-.main-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #fff;
-    padding: 15px;
-}
-
-/* Logo */
-.logo img {
-    height: 50px;
-}
-
-/* Burger-menu ikon */
-.burger-menu {
-    font-size: 40px;
-    cursor: pointer;
-    display: none; /* Skjules som standard */
-}
-
-/* Menu-indhold */
-.burger-menu-items {
-    display: none;
+/* Container til dropdown */
+.dropdown-menu {
+    display: none; /* Skjult som standard */
     position: absolute;
-    top: 60px;
-    right: 10px;
-    background: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    width: 200px;
-    flex-direction: column;
-    z-index: 1000;
-    opacity: 85%;
-}
-
-/* Når menuen er aktiv */
-.burger-menu-items.active {
-    display: flex !important;
-}
-
-/* Links styling */
-.burger-menu-items ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.burger-menu-items a {
+    top: 100%;           /* Placeres under CTA-knappen */
+    left: 50%;           /* Starter fra midten */
+    transform: translateX(-50%); /* Centrerer dropdown-menuen */
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     padding: 10px;
+    margin-top: 5px;     /* Afstand mellem knap og menu */
+    min-width: 200px;
+    z-index: 1000;
+}
+
+/* Links i dropdown */
+.dropdown-menu a {
     display: block;
-    color: #000;
+    padding: 8px 12px;
+    color: #972620;
     text-decoration: none;
-    font-family: 'Arial', sans-serif;
-    transition: background 0.3s;
+    font-size: 14px;
 }
 
-.burger-menu-items a:hover {
-    background: #ca1606;
-}
-
-/* Navigation links (desktop) */
-.nav-links {
-    display: flex;
-    gap: 15px;
-    list-style: none;
-}
-
-/* Skjuler .nav-links i mobilvisning */
-@media screen and (max-width: 768px) {
-    .burger-menu {
-        display: block; /* Vises kun i mobil */
-    }
-
-    .burger-menu-items {
-        display: flex; /* Starter skjult */
-    }
-
-    .burger-menu-items.active {
-        display: flex;
-    }
-
-    /* Skjul de normale navigation links på små skærme */
-    .nav-links {
-        display: none;
-    }
-     .top-links {
-        display: none;
-    }
-}
-
-/* Desktop visning */
-@media screen and (min-width: 769px) {
-    .burger-menu {
-        display: none;
-    }
-
-    .burger-menu-items {
-        display: none;
-        position: static;
-        background: none;
-        box-shadow: none;
-        flex-direction: row;
-    }
+/* Hover-effekt */
+.dropdown-menu a:hover {
+    background-color: #972620;
+    color: #fff;
 }
 
 
@@ -427,6 +318,7 @@ body {
 
 }
 
+
 .hero-content {
     max-width: 600px;
 
@@ -438,7 +330,7 @@ body {
     width: 100%;
     height: auto;
     margin-bottom: 40px;
-
+    
 }
 
 .hero h1 {
@@ -452,8 +344,8 @@ body {
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     position: absolute;
-    right: 10%;
-    top: 80%;
+    right: 6%;
+    top: 75%;
     transform: translateY(-50%);
     width: 350px;
     border: #972620 solid 2px;
@@ -548,27 +440,68 @@ body {
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
+    width: 100%;
+    background-color: #dbe8e6; /* Baggrundsfarve */
+    border-radius: 10px; /* Rundede hjørner */
+    padding: 10px; /* Fjern margin og padding på siderne for at få farven til at gå ud til kanten */
 }
 
-.payment-option {
+.payment-option-box {
+    flex: 1;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    cursor: pointer;
-}
-
-.payment-img {
-    width: 100px;
-    /* Juster efter behov */
-    height: auto;
-    border: none;
-    background: none;
-}
-
-.qr-text {
-    margin-top: 8px;
-    font-size: 14px;
+    align-items: center; /* Centrerer billeder og tekst horisontalt */
+    justify-content: center; /* Centrerer billeder og tekst vertikalt */
     text-align: center;
+    position: relative;
+}
+
+/* Divider-streg i midten */
+.payment-option-box:first-child::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 20%;  /* Startpunkt (20% nede) */
+    height: 60%; /* Divider fylder 60% af højden */
+    width: 2px;
+    background-color: #257F88; /* Farven fra billedet */
+}
+
+/* Ikon styling */
+.payment-img-1 {
+    height: 60px; /* Ens størrelse på højde */
+    margin-bottom: 15px; /* Giver lidt afstand mellem billede og tekst */
+}
+
+.payment-img-2 {
+    height: 60px; /* Ens størrelse på højde */
+    margin-bottom: 15px; /* Giver lidt afstand mellem billede og tekst */
+    position: relative; /* Gør det muligt at bruge top */
+    top: 10px; /* Flytter billedet ned */
+}
+
+/* Flytter MobilePay-logoet ned */
+.payment-option-box:nth-child(2) .payment-img {
+    margin-top: 10px; /* Flytter MobilePay-logoet ned, så det står på linje med QR-koden */
+}
+
+/* Tekst-styling */
+.qr-text-1 {
+    font-size: 8px; /* Ændrer tekststørrelse til 10px */
+    font-weight: bold;
+    color: #333;
+    margin-top: 5px;
+    white-space: nowrap; /* Forhindrer teksten i at bryde til næste linje */
+}
+
+.qr-text-2 {
+    font-size: 8px; /* Ændrer tekststørrelse til 10px */
+    font-weight: bold;
+    color: #333;
+    margin-top: 5px;
+    white-space: nowrap; /* Forhindrer teksten i at bryde til næste linje */
+    position: relative; /* Gør det muligt at bruge top */
+    top: 7px; /* Flytter billedet ned */
 }
 
 .payment-btn {

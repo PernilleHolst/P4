@@ -11,15 +11,14 @@
     <script type="text/javascript" defer src="js/scroll-up-knap.js"></script>
     <script type="text/javascript" defer src="js/dropdown-menu.js"></script>
     <script type="text/javascript" defer src="js/slideshow.js"></script>
-    <script type="text/javascript" defer src="js/burger-menu.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script defer src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script defer src="js/burger-menu.js"></script>
 </head>
 
 
 <body>
     <nav class="navbar">
         <div class="top-bar">
-            <!--red menu-->
             <ul class="top-links">
                 <li><a href="#">Dansk Katteregister</a></li>
                 <li><a href="#">Om Inges Kattehjem</a></li>
@@ -29,13 +28,13 @@
                 <li><a href="#">Kontakt</a></li>
                 <li class="cart"><a href="#">🛒 0 Emner</a></li>
             </ul>
-        </div>
+            </div>
         </div>
         <div class="main-nav">
             <a href="forside.html" class="logo">
                 <img src="images/ingeskattehjem_logo_v2.png" alt="Inges Kattehjem Logo">
             </a>
-            <!--white menu-->
+        <div class="nav-right">
             <ul class="nav-links">
                 <li><a href="#">Adoptér en kat</a></li>
                 <li><a href="#">Kattepension</a></li>
@@ -44,43 +43,20 @@
                 <li><a href="#">Katteleksikon</a></li>
                 <li><a href="#">Nyhederne</a></li>
             </ul>
-        </div>
-        <div class="call-to-action">
-            <a href="#" class="cta-button" id="ctaButton">STØT OS</a>
-            <div class="dropdown-menu" id="dropdownMenu">
-                <a href="#">Shop hos Katteloppen</a>
-                <a href="#">Bliv plejefamilie</a>
-                <a href="#">Bliv sponsor</a>
-                <a href="#">Testamente & legat</a>
-                <a href="#">Bliv frivillig/Donér</a>
+            <div class="call-to-action">
+                <a href="#" class="cta-button" id="ctaButton">STØT OS</a>
+                <div class="dropdown-menu" id="dropdownMenu">
+                    <a href="#">Shop hos Katteloppen</a>
+                    <a href="#">Bliv plejefamilie</a>
+                    <a href="#">Bliv sponsor</a>
+                    <a href="#">Testamente & legat</a>
+                    <a href="">Bliv frivillig/Donér</a>
+                </div>
+                <a href="#" class="search"> &#x1F50E;</a>
             </div>
-            <a href="#" class="search"> &#x1F50E;</a>
         </div>
         </div>
-        <!-- Burger-menu ikon -->
-        <div class="burger-menu">☰</div>
-        <!-- Burger-menu indhold -->
-        <div class="burger-menu-items">
-            <ul class="top-links">
-                <li><a href="#">Dansk Katteregister</a></li>
-                <li><a href="#">Om Inges Kattehjem</a></li>
-                <li><a href="#">Webshop</a></li>
-                <li><a href="#">Dyreværn</a></li>
-                <li><a href="#">Lovgivning</a></li>
-                <li><a href="#">Kontakt</a></li>
-                <li class="cart"><a href="#">🛒 0 Emner</a></li>
-            </ul>
-            <ul class="nav-links">
-                <li><a href="#">Adoptér en kat</a></li>
-                <li><a href="#">Kattepension</a></li>
-                <li><a href="#">Klinikker</a></li>
-                <li><a href="#">Artikler</a></li>
-                <li><a href="#">Katteleksikon</a></li>
-                <li><a href="#">Nyhederne</a></li>
-            </ul>
         </div>
-    </nav>
-
 
     <!-- Hero Section with Donation Form -->
     <section class="hero">
@@ -112,12 +88,19 @@
                 <button class="donate-btn">Doner nu</button>
             </div>
             <div class="payment-options">
-                <button class="payment-btn">Kreditkort</button>
-                <button class="payment-btn">Scan QR-kode</button>
+                <div class="payment-option-box">
+                    <img src="images/stotkattene-ingeskattehjem.png" alt="Scan QR" class="payment-img-1">
+                    <p class="qr-text-1">SCAN QR KODEN</p>
+                </div>
+                
+                <div class="payment-option-box">
+                    <img src="images/mobilepay.png" alt="MobilePay" class="payment-img-2">
+                    <p class="qr-text-2">STØT MED MOBILEPAY<br>221540</p>
+                </div>
             </div>
         </div>
-        </div>
     </section>
+
 
 
 
