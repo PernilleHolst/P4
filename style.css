@@ -153,7 +153,7 @@ body {
     border-bottom: 2px solid #ddd;
     padding-top: 10px;
     margin-bottom: -4px;
-    
+
 }
 
 /* Juster logoets størrelse */
@@ -165,7 +165,8 @@ body {
 .nav-right {
     display: flex;
     align-items: center;
-    justify-content: center; /* Centrerer nav-links */
+    justify-content: center;
+    /* Centrerer nav-links */
     width: 100%;
     position: relative;
 }
@@ -176,7 +177,8 @@ body {
     display: flex;
     gap: 20px;
     padding: 0;
-    margin: 0 auto; /* Holder den centreret */
+    margin: 0 auto;
+    /* Holder den centreret */
     margin-left: 30%;
 }
 
@@ -205,8 +207,10 @@ body {
     position: relative;
     display: flex;
     align-items: center;
-    gap: 15px; /* Afstand mellem CTA-knap og søgeikon */
-    margin-left: auto; /* Skubber CTA-knappen mod højre */
+    gap: 15px;
+    /* Afstand mellem CTA-knap og søgeikon */
+    margin-left: auto;
+    /* Skubber CTA-knappen mod højre */
 }
 
 /* CTA-knappen */
@@ -253,7 +257,7 @@ body {
     color: #333;
     font-size: 16px;
     padding-left: 7px;
-    
+
 }
 
 .search:hover {
@@ -262,17 +266,22 @@ body {
 
 /* Container til dropdown */
 .dropdown-menu {
-    display: none; /* Skjult som standard */
+    display: none;
+    /* Skjult som standard */
     position: absolute;
-    top: 100%;           /* Placeres under CTA-knappen */
-    left: 50%;           /* Starter fra midten */
-    transform: translateX(-50%); /* Centrerer dropdown-menuen */
+    top: 100%;
+    /* Placeres under CTA-knappen */
+    left: 50%;
+    /* Starter fra midten */
+    transform: translateX(-50%);
+    /* Centrerer dropdown-menuen */
     background-color: white;
     border: 1px solid #ddd;
     border-radius: 5px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     padding: 10px;
-    margin-top: 5px;     /* Afstand mellem knap og menu */
+    margin-top: 5px;
+    /* Afstand mellem knap og menu */
     min-width: 200px;
     z-index: 1000;
 }
@@ -292,6 +301,151 @@ body {
     color: #fff;
 }
 
+@media (max-width: 768px) {
+    .main-nav {
+        flex-direction: column;
+        gap: 30px;
+
+    }
+
+    .nav-links {
+        flex-direction: column;
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .nav-right {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+}
+
+/* Burger-menu styling */
+.burger-menu-container {
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: white;
+}
+
+.burger-menu {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.burger-menu span {
+    display: block;
+    width: 30px;
+    height: 4px;
+    background-color: black;
+    transition: 0.3s;
+}
+
+/* Burger-menu call-to-action */
+.burger-call-to-action {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.burger-call-to-action a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #fff;
+}
+
+/* Burger-menu drop-down */
+.burger-menu-content {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 250px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    z-index: 1000;
+    padding: 10px 0;
+}
+
+/* Rød top-bar i burger-menu */
+.burger-top-bar {
+    background-color: #972620;
+    padding: 10px;
+}
+
+.burger-top-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.burger-top-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* Burger-menu indhold */
+.burger-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.burger-links li {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.burger-links a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    display: block;
+}
+
+/* Åbner burger-menu */
+.burger-menu.open span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.burger-menu.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.burger-menu.open span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+.burger-menu-content.show {
+    display: block;
+}
+
+/* Responsiv tilstand */
+@media (max-width: 768px) {
+    .burger-menu-container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .main-nav {
+        display: none;
+    }
+
+    .top-bar {
+        display: none;
+    }
+}
 
 /* Hero Section */
 .hero {
@@ -330,7 +484,7 @@ body {
     width: 100%;
     height: auto;
     margin-bottom: 40px;
-    
+
 }
 
 .hero h1 {
@@ -441,17 +595,22 @@ body {
     justify-content: space-between;
     margin-top: 20px;
     width: 100%;
-    background-color: #dbe8e6; /* Baggrundsfarve */
-    border-radius: 10px; /* Rundede hjørner */
-    padding: 10px; /* Fjern margin og padding på siderne for at få farven til at gå ud til kanten */
+    background-color: #dbe8e6;
+    /* Baggrundsfarve */
+    border-radius: 10px;
+    /* Rundede hjørner */
+    padding: 10px;
+    /* Fjern margin og padding på siderne for at få farven til at gå ud til kanten */
 }
 
 .payment-option-box {
     flex: 1;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centrerer billeder og tekst horisontalt */
-    justify-content: center; /* Centrerer billeder og tekst vertikalt */
+    align-items: center;
+    /* Centrerer billeder og tekst horisontalt */
+    justify-content: center;
+    /* Centrerer billeder og tekst vertikalt */
     text-align: center;
     position: relative;
 }
@@ -461,47 +620,63 @@ body {
     content: "";
     position: absolute;
     right: 0;
-    top: 20%;  /* Startpunkt (20% nede) */
-    height: 60%; /* Divider fylder 60% af højden */
+    top: 20%;
+    /* Startpunkt (20% nede) */
+    height: 60%;
+    /* Divider fylder 60% af højden */
     width: 2px;
-    background-color: #257F88; /* Farven fra billedet */
+    background-color: #257F88;
+    /* Farven fra billedet */
 }
 
 /* Ikon styling */
 .payment-img-1 {
-    height: 60px; /* Ens størrelse på højde */
-    margin-bottom: 15px; /* Giver lidt afstand mellem billede og tekst */
+    height: 60px;
+    /* Ens størrelse på højde */
+    margin-bottom: 15px;
+    /* Giver lidt afstand mellem billede og tekst */
 }
 
 .payment-img-2 {
-    height: 60px; /* Ens størrelse på højde */
-    margin-bottom: 15px; /* Giver lidt afstand mellem billede og tekst */
-    position: relative; /* Gør det muligt at bruge top */
-    top: 10px; /* Flytter billedet ned */
+    height: 60px;
+    /* Ens størrelse på højde */
+    margin-bottom: 15px;
+    /* Giver lidt afstand mellem billede og tekst */
+    position: relative;
+    /* Gør det muligt at bruge top */
+    top: 10px;
+    /* Flytter billedet ned */
 }
 
 /* Flytter MobilePay-logoet ned */
 .payment-option-box:nth-child(2) .payment-img {
-    margin-top: 10px; /* Flytter MobilePay-logoet ned, så det står på linje med QR-koden */
+    margin-top: 10px;
+    /* Flytter MobilePay-logoet ned, så det står på linje med QR-koden */
 }
 
 /* Tekst-styling */
 .qr-text-1 {
-    font-size: 8px; /* Ændrer tekststørrelse til 10px */
+    font-size: 8px;
+    /* Ændrer tekststørrelse til 10px */
     font-weight: bold;
     color: #333;
     margin-top: 5px;
-    white-space: nowrap; /* Forhindrer teksten i at bryde til næste linje */
+    white-space: nowrap;
+    /* Forhindrer teksten i at bryde til næste linje */
 }
 
 .qr-text-2 {
-    font-size: 8px; /* Ændrer tekststørrelse til 10px */
+    font-size: 8px;
+    /* Ændrer tekststørrelse til 10px */
     font-weight: bold;
     color: #333;
     margin-top: 5px;
-    white-space: nowrap; /* Forhindrer teksten i at bryde til næste linje */
-    position: relative; /* Gør det muligt at bruge top */
-    top: 7px; /* Flytter billedet ned */
+    white-space: nowrap;
+    /* Forhindrer teksten i at bryde til næste linje */
+    position: relative;
+    /* Gør det muligt at bruge top */
+    top: 7px;
+    /* Flytter billedet ned */
 }
 
 .payment-btn {
