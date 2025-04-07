@@ -1,5 +1,10 @@
 /* ===== GLOBAL STYLES ===== */
 /* Global Styles */
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -149,18 +154,21 @@ body {
     align-items: center;
     justify-content: space-between;
     background-color: var(--primary-color);
-    padding: 5px 30px;
-    /* Reduceret højde */
-    border-bottom: 2px solid #ddd;
-    padding-top: 10px;
-    margin-bottom: -4px;
+    padding: 10px 30px;
+    flex-wrap: nowrap; /* ingen wrap i desktop */
+    gap: 20px;
 
+}
+
+.logo {
+    flex: 0 0 auto;
 }
 
 /* Juster logoets størrelse */
 .logo img {
     height: 50px;
-    /* Mindre logo */
+    width: auto;
+    display: block;
 }
 
 .nav-right {
@@ -170,6 +178,9 @@ body {
     /* Centrerer nav-links */
     width: 100%;
     position: relative;
+    flex-wrap: wrap;
+    width: 100%;
+    min-width: 0;
 }
 
 /* Navigation links */
@@ -177,10 +188,12 @@ body {
     list-style: none;
     display: flex;
     gap: 20px;
-    padding: 0;
     margin: 0 auto;
     /* Holder den centreret */
-    margin-left: 30%;
+    margin-left: 20%;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px 0;
 }
 
 .nav-links li {
@@ -211,7 +224,6 @@ body {
     gap: 15px;
     /* Afstand mellem CTA-knap og søgeikon */
     margin-left: auto;
-    /* Skubber CTA-knappen mod højre */
 }
 
 /* CTA-knappen */
@@ -227,6 +239,10 @@ body {
     display: flex;
     align-items: center;
     gap: 15px;
+    min-width: 90px; /* Juster afhængigt af fontstørrelse */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 /* CTA-knap hover */
@@ -350,6 +366,12 @@ body {
         justify-content: space-between;
         padding: 10px 20px;
     }
+
+    .cta-button {
+        font-size: 12px;
+        padding: 6px 12px;
+        min-width: unset;
+    }
 }
 
 /* Burger-menu styling */
@@ -387,7 +409,7 @@ body {
 
 .burger-call-to-action a {
     text-decoration: none;
-    font-size: 16px;
+    font-size: 12px;
     color: #fff;
 }
 
@@ -486,56 +508,208 @@ body {
 }
 
 /* Responsiv tilstand */
-@media (max-width: 768px) {
-    .burger-menu-container {
-        display: flex;
-        justify-content: space-between;
-    }
 
+@media (min-width: 769px) and (max-width: 1024px) {
+
+    /* Main nav beholder sin flex men bliver lidt mindre */
     .main-nav {
-        display: none;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
     }
 
-    .top-bar {
-        display: none;
+    .logo {
+        order: -1; /* ryk logoet først */
+        text-align: center;
     }
-    
+
+    .logo img {
+        height: 45px;
+        margin: 0 auto;
+    }
+
+    .nav-links {
+        gap: 15px;
+        margin-left: 0;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+        padding: 5px;
+    }
+
     .call-to-action {
-        display: flex; /* Behold CTA'en synlig */
+        gap: 10px;
+    }
+
+    .cta-button {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+
+    .search {
+        font-size: 14px;
+        padding-left: 5px;
     }
 
     .dropdown-menu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: white;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 10px;
-    margin-top: 5px;
-    min-width: 200px;
-    z-index: 1000;
-    }
-
-    .dropdown-menu.show {
-        display: block !important;
+        min-width: 180px;
     }
 
     .dropdown-menu a {
-        display: block;
-        padding: 8px 12px;
-        color: #972620;
-        text-decoration: none;
-        font-size: 14px;
+        font-size: 13px;
+        padding: 8px 10px;
     }
+
+    /* Top-bar justeres lidt */
+    .top-links {
+        gap: 15px;
+    }
+
+    .top-links a {
+        font-size: 13px;
+    }
+
+    .cart {
+        gap: 8px;
+    }
+
+    /* Burger-menu skjules – vis main-nav i stedet */
+    .burger-menu-container {
+        display: none !important;
+    }
+
+    .cta-button {
+        font-size: 12px;
+        padding: 6px 12px;
+        min-width: unset;
+    }
+
+}
     
-    .dropdown-menu a:hover {
-        background-color: #972620;
-        color: #fff;
+@media (max-width: 768px) {
+
+    /* Topbar */
+    .top-bar {
+        display: none; /* skjules på mobil */
     }
+
+    /* Hovednavigation */
+    .main-nav {
+        display: none; /* skjules på mobil */
+    }
+
+    /* Burger-menu container */
+    .burger-menu-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: white;
+        padding: 10px 20px;
+    }
+
+    /* Logo i mobil */
+    .burger-logo {
+        display: block;
+    }
+
+    .burger-logo img {
+        height: 40px;
+    }
+
+    /* Nav-links som drop-down under burger-menu */
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        margin-left: 0;
+    }
+
+    .nav-right {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    /* CTA synlig i burger-menu */
+    .call-to-action {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        gap: 10px;
+        margin: 0 auto;
+    }
+
+    .cta-button {
+        font-size: 13px;
+        padding: 10px 20px;
+        justify-content: center;
+    }
+
+    .search {
+        font-size: 14px;
+        padding-left: 0;
+    }
+
+    /* Dropdown menu */
+    .dropdown-menu {
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: none;
+        margin-top: 10px;
+        width: 100%;
+    }
+
+    .dropdown-menu a {
+        font-size: 14px;
+        text-align: center;
+    }
+
+    /* Burger-menu bliver klikbar */
+    .burger-menu-content {
+        width: 100%;
+        position: relative;
+        top: auto;
+        left: auto;
+        border-radius: 0;
+        padding: 10px 0;
+    }
+
+    /* Responsiv tekst og layout */
+    .burger-links a,
+    .burger-top-links a {
+        font-size: 16px;
+        padding: 12px 20px;
+    }
+
+    .burger-call-to-action a {
+        font-size: 13px;
+    }
+}
+
+/* Ekstra lille skærm - fx iPhones SE */
+@media (max-width: 480px) {
+    .cta-button {
+        font-size: 12px;
+        padding: 8px 15px;
+    }
+
+    .burger-logo img {
+        height: 35px;
+    }
+
+    .burger-links a {
+        font-size: 15px;
+    }
+
+    .cta-button {
+        font-size: 12px;
+        padding: 6px 12px;
+        min-width: unset;
+    }
+
 }
 
 /* ===== HERO SECTION ===== */
