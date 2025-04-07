@@ -269,23 +269,22 @@ body {
 /* Container til dropdown */
 .dropdown-menu {
     display: none;
-    /* Skjult som standard */
     position: absolute;
     top: 100%;
-    /* Placeres under CTA-knappen */
     left: 50%;
-    /* Starter fra midten */
     transform: translateX(-50%);
-    /* Centrerer dropdown-menuen */
     background-color: white;
     border: 1px solid #ddd;
     border-radius: 5px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     padding: 10px;
     margin-top: 5px;
-    /* Afstand mellem knap og menu */
     min-width: 200px;
     z-index: 1000;
+}
+
+.dropdown-menu.show {
+    display: block;
 }
 
 /* Links i dropdown */
@@ -379,10 +378,12 @@ body {
 
 /* Burger-menu call-to-action */
 .burger-call-to-action {
+    position: relative;
     display: flex;
     align-items: center;
     gap: 10px;
 }
+
 
 .burger-call-to-action a {
     text-decoration: none;
@@ -424,7 +425,7 @@ body {
 
 .burger-top-links a {
     text-decoration: none;
-    color: black;
+    color: #fff;
     font-size: 16px;
     display: block;
 }
@@ -497,6 +498,43 @@ body {
 
     .top-bar {
         display: none;
+    }
+    
+    .call-to-action {
+        display: flex; /* Behold CTA'en synlig */
+    }
+
+    .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    margin-top: 5px;
+    min-width: 200px;
+    z-index: 1000;
+    }
+
+    .dropdown-menu.show {
+        display: block !important;
+    }
+
+    .dropdown-menu a {
+        display: block;
+        padding: 8px 12px;
+        color: #972620;
+        text-decoration: none;
+        font-size: 14px;
+    }
+    
+    .dropdown-menu a:hover {
+        background-color: #972620;
+        color: #fff;
     }
 }
 
