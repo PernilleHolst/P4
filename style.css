@@ -1037,16 +1037,16 @@ p {
 }
 
 .support-btn {
-    padding: 12px 20px;
+    width: 100%;
+    padding: 12px;
     background-color: #972620;
     color: white;
     border: none;
-    border-radius: 7px;
+    border-radius: 5px;
+    font-size: 14px;
     cursor: pointer;
     transition: background-color 0.3s;
-    display: block;
-    width: fit-content;
-    margin-top: 20px;
+    text-decoration: none;
 }
 
 .support-btn:hover {
