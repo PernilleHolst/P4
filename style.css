@@ -861,6 +861,24 @@ body {
     text-align: left;
 }
 
+@media (min-width: 769px) and (max-width: 1300px) {
+    .support-section h5 {
+        font-size: 36px;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    .support-section h5 {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 480px) {
+    .support-section h5 {
+        font-size: 26px;
+    }
+}
+
 /* Container med lidt padding for bedre responsivitet */
 .container {
     width: 100%;
@@ -895,7 +913,7 @@ body {
 }
 
 /* RESPONSIVITET */
-@media (max-width: 1024px) {
+@media (min-width: 769px) and (max-width: 1100px) {
     .support-section h5 {
         font-size: 28px;
         text-align: center;
@@ -912,7 +930,7 @@ body {
     }
 }
 
-@media (max-width: 768px) {
+@media (min-width: 481px) and (max-width: 768px) {
     .support-section h5 {
         font-size: 28px;
         text-align: center;
@@ -1020,7 +1038,65 @@ p {
     background-color: #7a1e18;
 }
 
+@media (min-width: 769px) and (max-width: 1100px) {
+    .column video {
+        object-fit: contain;
+        background-color: black; /* For at undgå gennemsigtige kanter */
+    }
+    .support-section h5 {
+        font-size: 28px;
+        text-align: center;
+    }
 
+    .support-columns {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .column {
+        max-width: 90%;
+        padding: 15px;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    .column video {
+        height: auto; /* Gør at højden følger proportioner */
+        max-height: 250px;
+        object-fit: contain;
+        background-color: black;
+    }
+    .support-section h5 {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    .support-columns {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .column {
+        max-width: 90%;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .column video {
+        max-height: 200px;
+        object-fit: contain;
+        background-color: black;
+    }
+
+    .support-section h5 {
+        font-size: 24px;
+    }
+
+    .column {
+        padding: 10px;
+    }
+}
 
 /* Benefits Section */
 .benefits-section {
@@ -1512,7 +1588,7 @@ img {
 }
 
 /* Responsive Design */
-@media (max-width: 1024px) {
+@media (min-width: 480px) and (max-width: 1100px) {
     .support-columns {
         flex-direction: column;
     }
@@ -1523,7 +1599,7 @@ img {
     }
 
     .donation-box {
-        position: static;
+      position: static;
         transform: none;
         width: 100%;
         margin-top: 30px;
