@@ -149,38 +149,36 @@ body {
     align-items: center;
     justify-content: space-between;
     background-color: var(--primary-color);
-    padding: 5px 30px;
-    /* Reduceret højde */
+    padding: 10px 30px;
     border-bottom: 2px solid #ddd;
     padding-top: 10px;
-    margin-bottom: -4px;
 
 }
 
 /* Juster logoets størrelse */
 .logo img {
     height: 50px;
-    /* Mindre logo */
 }
 
 .nav-right {
     display: flex;
+    flex: 2 1 auto;
     align-items: center;
     justify-content: center;
-    /* Centrerer nav-links */
-    width: 100%;
     position: relative;
+    min-width: 200px;
 }
 
 /* Navigation links */
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 15px;
+    justify-content: center;
     padding: 0;
     margin: 0 auto;
-    /* Holder den centreret */
     margin-left: 30%;
+    flex-wrap: wrap;
 }
 
 .nav-links li {
@@ -485,7 +483,7 @@ body {
 
 /* Responsiv tilstand */
 
-@media (min-width: 769px) and (max-width: 1100px) {
+@media (min-width: 769px) and (max-width: 1450px) {
 
     .main-nav {
         padding: 10px 20px;
@@ -497,11 +495,12 @@ body {
 
     .nav-links {
         gap: 15px;
-        margin-left: 10%;
+        margin-left: 30%;
     }
 
     .nav-links a {
         font-size: 13px;
+        padding: 2px 4px;
     }
 
     .call-to-action {
@@ -565,6 +564,16 @@ body {
         display: none;
     }
 
+    .nav-links {
+        gap: 15px;
+        margin-left: 30%;
+    }
+
+    .nav-links a {
+        font-size: 13px;
+        padding: 2px 4px;
+    }
+
     .call-to-action {
         display: flex;
         /* Behold CTA'en synlig */
@@ -601,6 +610,10 @@ body {
     .dropdown-menu a:hover {
         background-color: #972620;
         color: #fff;
+    }
+
+    .burger-menu-container {
+        display: flex;
     }
 }
 
