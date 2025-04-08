@@ -148,7 +148,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: var(--primary-color);
+    background-color: #fff;
     padding: 10px 30px;
     border-bottom: 2px solid #ddd;
     padding-top: 10px;
@@ -621,11 +621,9 @@ body {
 /* Hero Section */
 .hero {
     .hero {
-        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/Headerpic.png');
         background-size: cover;
         background-position: center;
         color: white;
-        /* padding: 100px 0; */
         position: relative;
         height: 80vh;
         display: flex;
@@ -1262,13 +1260,14 @@ img {
     }
 }
 
+
 @keyframes fade {
     from {
         opacity: .9;
     }
 
     to {
-        opacity: 1.5;
+        opacity: 1;
     }
 }
 
@@ -1620,7 +1619,6 @@ img {
 
     .hero {
         height: auto;
-        padding: auto;
     }
 
     .social-links {
@@ -1631,7 +1629,6 @@ img {
 @media (max-width: 768px) {
     .footer-content {
         flex-direction: column;
-        /* Sørger for at kolonnerne stables vertikalt */
         align-items: center;
         text-align: center;
     }
@@ -1650,14 +1647,12 @@ img {
 
     .footer-column {
         width: 90%;
-        /* Gør kolonner bredere */
         padding: 0;
         min-width: unset;
     }
 
     .footer-divider {
         display: none;
-        /* Fjerner divideren for at spare plads */
     }
 }
 
