@@ -1,9 +1,11 @@
 /* Fjern scrolling */
-html, body {
+html,
+body {
     margin: 0;
     padding: 0;
     height: 100%;
-    overflow: hidden; /* Forhindrer scrolling */
+    overflow: hidden;
+    /* Forhindrer scrolling */
 }
 
 /* Antag at navbar er 80px høj */
@@ -13,53 +15,59 @@ html, body {
     position: fixed;
     top: 0;
     left: 0;
-    background: rgba(0, 0, 0, 0.8); /* Semi-transparent */
+    background: rgba(0, 0, 0, 0.8);
+    /* Semi-transparent */
     z-index: 1000;
 }
 
 /* Forside sektion */
 .forside {
     width: 100%;
-    height: 100vh; /* Fuld højde af skærmen */
+    height: 100vh;
+    /* Fuld højde af skærmen */
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
-    padding-top: 100px; /* Skubber ned svarende til navbarens højde */
+    padding-top: 100px;
+    /* Skubber ned svarende til navbarens højde */
 }
 
 /* Forside billede */
 .forside-image {
     position: absolute;
-    top: 97px; /* Starter præcis under navbaren */
+    top: 97px;
+    /* Starter præcis under navbaren */
     left: 0;
     width: 100%;
-    height: calc(100vh - 80px); /* Trækker navbarens højde fra */
-    object-fit: cover; /* Fylder hele området uden forvrængning */
+    height: calc(100vh - 80px);
+    /* Trækker navbarens højde fra */
+    object-fit: cover;
+    /* Fylder hele området uden forvrængning */
 }
 
 /* Navigation Bar */
 /* Generel styling */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Lato', sans-serif;
     margin: 0;
     padding: 0;
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Lato', sans-serif;
     margin: 0;
     padding: 0;
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Lato', sans-serif;
     margin: 0;
     padding: 0;
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Lato', sans-serif;
     margin: 0;
     padding: 0;
 }
@@ -289,7 +297,8 @@ body {
 /* Søgeikon + CTA-knap */
 /* Container til dropdown */
 .dropdown-menu {
-    display: none; /* Skjult som standard */
+    display: none;
+    /* Skjult som standard */
     position: absolute;
     background-color: white;
     border: 1px solid #ddd;
@@ -353,4 +362,4 @@ body {
         text-align: center;
     }
 
-    }
+}
