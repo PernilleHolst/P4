@@ -1,5 +1,9 @@
 /* ===== GLOBAL STYLES ===== */
 /* Global Styles */
+html {
+    scroll-behavior: smooth;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -148,39 +152,37 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: var(--primary-color);
-    padding: 5px 30px;
-    /* Reduceret højde */
+    background-color: #fff;
+    padding: 10px 30px;
     border-bottom: 2px solid #ddd;
     padding-top: 10px;
-    margin-bottom: -4px;
 
 }
 
 /* Juster logoets størrelse */
 .logo img {
     height: 50px;
-    /* Mindre logo */
 }
 
 .nav-right {
     display: flex;
+    flex: 2 1 auto;
     align-items: center;
     justify-content: center;
-    /* Centrerer nav-links */
-    width: 100%;
     position: relative;
+    min-width: 200px;
 }
 
 /* Navigation links */
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 15px;
+    justify-content: center;
     padding: 0;
     margin: 0 auto;
-    /* Holder den centreret */
     margin-left: 30%;
+    flex-wrap: wrap;
 }
 
 .nav-links li {
@@ -211,7 +213,6 @@ body {
     gap: 15px;
     /* Afstand mellem CTA-knap og søgeikon */
     margin-left: auto;
-    /* Skubber CTA-knappen mod højre */
 }
 
 /* CTA-knappen */
@@ -227,6 +228,7 @@ body {
     display: flex;
     align-items: center;
     gap: 15px;
+    white-space: nowrap;
 }
 
 /* CTA-knap hover */
@@ -251,8 +253,6 @@ body {
     transform: rotate(180deg);
 }
 
-
-
 /* Søgeikon */
 .search {
     text-decoration: none;
@@ -269,23 +269,22 @@ body {
 /* Container til dropdown */
 .dropdown-menu {
     display: none;
-    /* Skjult som standard */
     position: absolute;
     top: 100%;
-    /* Placeres under CTA-knappen */
     left: 50%;
-    /* Starter fra midten */
     transform: translateX(-50%);
-    /* Centrerer dropdown-menuen */
     background-color: white;
     border: 1px solid #ddd;
     border-radius: 5px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     padding: 10px;
     margin-top: 5px;
-    /* Afstand mellem knap og menu */
     min-width: 200px;
     z-index: 1000;
+}
+
+.dropdown-menu.show {
+    display: block;
 }
 
 /* Links i dropdown */
@@ -312,7 +311,7 @@ body {
 
     .nav-links {
         flex-direction: column;
-        margin-left: 0;
+        margin-left: auto;
         text-align: center;
     }
 
@@ -379,14 +378,16 @@ body {
 
 /* Burger-menu call-to-action */
 .burger-call-to-action {
+    position: relative;
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
+
 .burger-call-to-action a {
     text-decoration: none;
-    font-size: 16px;
+    font-size: 12px;
     color: #fff;
 }
 
@@ -424,7 +425,7 @@ body {
 
 .burger-top-links a {
     text-decoration: none;
-    color: black;
+    color: #fff;
     font-size: 16px;
     display: block;
 }
@@ -485,6 +486,74 @@ body {
 }
 
 /* Responsiv tilstand */
+
+@media (min-width: 769px) and (max-width: 1450px) {
+
+    .main-nav {
+        padding: 10px 20px;
+    }
+
+    .logo img {
+        height: 45px;
+    }
+
+    .nav-links {
+        gap: 15px;
+        margin-left: 30%;
+    }
+
+    .nav-links a {
+        font-size: 13px;
+        padding: 2px 4px;
+    }
+
+    .call-to-action {
+        gap: 10px;
+    }
+
+    .cta-button {
+        font-size: 13px;
+        padding: 8px 16px;
+    }
+
+    .search {
+        font-size: 15px;
+    }
+
+    .dropdown-menu {
+        min-width: 180px;
+    }
+
+    .dropdown-menu a {
+        font-size: 13px;
+        padding: 8px 10px;
+    }
+
+    /* Top-bar justeres lidt */
+    .top-links {
+        gap: 15px;
+    }
+
+    .top-links a {
+        font-size: 13px;
+    }
+
+    .cart {
+        gap: 8px;
+    }
+
+    /* Burger-menu skjules – vis main-nav i stedet */
+    .burger-menu-container {
+        display: none !important;
+    }
+
+    .call-to-action a {
+        text-decoration: none;
+        font-size: 13px;
+        color: #fff;
+    }
+}
+
 @media (max-width: 768px) {
     .burger-menu-container {
         display: flex;
@@ -498,17 +567,67 @@ body {
     .top-bar {
         display: none;
     }
+
+    .nav-links {
+        gap: 15px;
+        margin-left: 30%;
+    }
+
+    .nav-links a {
+        font-size: 13px;
+        padding: 2px 4px;
+    }
+
+    .call-to-action {
+        display: flex;
+        /* Behold CTA'en synlig */
+    }
+
+    .dropdown-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: white;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 10px;
+        margin-top: 5px;
+        min-width: 200px;
+        z-index: 1000;
+    }
+
+    .dropdown-menu.show {
+        display: block !important;
+    }
+
+    .dropdown-menu a {
+        display: block;
+        padding: 8px 12px;
+        color: #972620;
+        text-decoration: none;
+        font-size: 14px;
+    }
+
+    .dropdown-menu a:hover {
+        background-color: #972620;
+        color: #fff;
+    }
+
+    .burger-menu-container {
+        display: flex;
+    }
 }
 
 /* ===== HERO SECTION ===== */
 /* Hero Section */
 .hero {
     .hero {
-        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/Headerpic.png');
         background-size: cover;
         background-position: center;
         color: white;
-        /* padding: 100px 0; */
         position: relative;
         height: 80vh;
         display: flex;
@@ -757,6 +876,24 @@ body {
     text-align: left;
 }
 
+@media (min-width: 769px) and (max-width: 1300px) {
+    .support-section h5 {
+        font-size: 36px;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    .support-section h5 {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 480px) {
+    .support-section h5 {
+        font-size: 26px;
+    }
+}
+
 /* Container med lidt padding for bedre responsivitet */
 .container {
     width: 100%;
@@ -791,7 +928,7 @@ body {
 }
 
 /* RESPONSIVITET */
-@media (max-width: 1024px) {
+@media (min-width: 769px) and (max-width: 1100px) {
     .support-section h5 {
         font-size: 28px;
         text-align: center;
@@ -808,7 +945,7 @@ body {
     }
 }
 
-@media (max-width: 768px) {
+@media (min-width: 481px) and (max-width: 768px) {
     .support-section h5 {
         font-size: 28px;
         text-align: center;
@@ -900,23 +1037,81 @@ p {
 }
 
 .support-btn {
-    padding: 12px 20px;
+    width: 100%;
+    padding: 12px;
     background-color: #972620;
     color: white;
     border: none;
-    border-radius: 7px;
+    border-radius: 5px;
+    font-size: 14px;
     cursor: pointer;
     transition: background-color 0.3s;
-    display: block;
-    width: fit-content;
-    margin-top: 20px;
+    text-decoration: none;
 }
 
 .support-btn:hover {
     background-color: #7a1e18;
 }
 
+@media (min-width: 769px) and (max-width: 1100px) {
+    .column video {
+        object-fit: contain;
+        background-color: black; /* For at undgå gennemsigtige kanter */
+    }
+    .support-section h5 {
+        font-size: 28px;
+        text-align: center;
+    }
 
+    .support-columns {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .column {
+        max-width: 90%;
+        padding: 15px;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    .column video {
+        height: auto; /* Gør at højden følger proportioner */
+        max-height: 250px;
+        object-fit: contain;
+        background-color: black;
+    }
+    .support-section h5 {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    .support-columns {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .column {
+        max-width: 90%;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .column video {
+        max-height: 200px;
+        object-fit: contain;
+        background-color: black;
+    }
+
+    .support-section h5 {
+        font-size: 24px;
+    }
+
+    .column {
+        padding: 10px;
+    }
+}
 
 /* Benefits Section */
 .benefits-section {
@@ -1069,13 +1264,14 @@ img {
     }
 }
 
+
 @keyframes fade {
     from {
         opacity: .9;
     }
 
     to {
-        opacity: 1.5;
+        opacity: 1;
     }
 }
 
@@ -1408,7 +1604,7 @@ img {
 }
 
 /* Responsive Design */
-@media (max-width: 1024px) {
+@media (min-width: 480px) and (max-width: 1100px) {
     .support-columns {
         flex-direction: column;
     }
@@ -1419,7 +1615,7 @@ img {
     }
 
     .donation-box {
-        position: static;
+      position: static;
         transform: none;
         width: 100%;
         margin-top: 30px;
@@ -1427,7 +1623,6 @@ img {
 
     .hero {
         height: auto;
-        padding: 60px 0;
     }
 
     .social-links {
@@ -1438,7 +1633,6 @@ img {
 @media (max-width: 768px) {
     .footer-content {
         flex-direction: column;
-        /* Sørger for at kolonnerne stables vertikalt */
         align-items: center;
         text-align: center;
     }
@@ -1457,14 +1651,12 @@ img {
 
     .footer-column {
         width: 90%;
-        /* Gør kolonner bredere */
         padding: 0;
         min-width: unset;
     }
 
     .footer-divider {
         display: none;
-        /* Fjerner divideren for at spare plads */
     }
 }
 

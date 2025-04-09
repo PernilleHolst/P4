@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inges-kattehjem Underside</title>
     <link rel="stylesheet" href="style.css">
-    <script type="text/javascript" defer src="script.js"></script>
-    <script type="text/javascript" defer src="js/donations.js"></script>
-    <script type="text/javascript" defer src="js/scroll-up-knap.js"></script>
-    <script type="text/javascript" defer src="js/dropdown-menu.js"></script>
-    <script type="text/javascript" defer src="js/slideshow.js"></script>
+    <script defer src="script.js"></script>
+    <script defer src="js/donations.js"></script>
+    <script defer src="js/scroll-up-knap.js"></script>
+    <script defer src="js/dropdown-menu.js"></script>
+    <script defer src="js/slideshow.js"></script>
     <script defer src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script defer src="js/burger-menu.js"></script>
 </head>
@@ -29,7 +29,6 @@
                 <li class="cart"><a href="#">🛒 0 Emner</a></li>
             </ul>
         </div>
-        </div>
         <div class="main-nav">
             <a href="forside.html" class="logo">
                 <img src="images/ingeskattehjem_logo_v2.png" alt="Inges Kattehjem Logo">
@@ -45,7 +44,7 @@
                 </ul>
                 <div class="call-to-action">
                     <a href="#" class="cta-button" id="ctaButton">STØT OS</a>
-                    <div class="dropdown-menu" id="dropdownMenu">
+                    <div class="dropdown-menu" id="dropdownMenuDesktop">
                         <a href="#">Shop hos Katteloppen</a>
                         <a href="#">Bliv plejefamilie</a>
                         <a href="#">Bliv sponsor</a>
@@ -55,7 +54,6 @@
                     <a href="#" class="search"> &#x1F50E;</a>
                 </div>
             </div>
-        </div>
         </div>
         <!-- Burger-menu knap -->
         <div class="burger-menu-container">
@@ -69,7 +67,7 @@
             </a>
             <div class="burger-call-to-action">
                 <a href="#" class="cta-button">STØT OS</a>
-                <div class="dropdown-menu" id="dropdownMenu">
+                <div class="dropdown-menu" id="dropdownMenuMobile">
                     <a href="#">Shop hos Katteloppen</a>
                     <a href="#">Bliv plejefamilie</a>
                     <a href="#">Bliv sponsor</a>
@@ -163,7 +161,7 @@
                         <p>Elsker du katte? Som frivillig hos Inges Kattehjem får du chancen for at redde liv, give
                             omsorg og være en helt for de katte, der har allermest brug for det. Kom og bliv en del af
                             noget meningsfuldt – de venter på dig!</p>
-                        <button class="support-btn">SØG HER</button>
+                            <a href="#frivillig" class="support-btn">SØG HER</a>
                     </div>
                 </div>
                 <div class="column">
@@ -173,7 +171,7 @@
                         <p>Gør en forskel i dag! Din donation hjælper os med at redde, pleje og finde nye hjem til katte
                             i nød. Hver eneste krone går til mad, medicin og trygge omgivelser – sammen kan vi give dem
                             en ny chance i livet!</p>
-                        <button class="support-btn">STØT HER</button>
+                            <a href="#donation" class="support-btn">STØT HER</a>
                     </div>
                 </div>
                 <div class="column">
@@ -204,7 +202,7 @@
                         <h3>Katten Maui</h3>
                         <p>Fra forladt kat til elsket familiemedlem – læs om Mauis hjerteskærende og inspirerende rejse!
                         </p>
-                        <button class="support-btn">LÆS MERE</button>
+                        <a href="#maui" class="support-btn">LÆS MERE</a>
                     </div>
                 </div>
             </div>
@@ -214,12 +212,11 @@
 
 
     <!-- Benefits Section -->
-    <section class="benefits-section">
+    <section id="donation" class="benefits-section">
         <div class="container">
             <h2>Hvad får du ud af at støtte os?</h2>
             <div class="benefits-content">
                 <div class="benefits-text">
-                    <ul>
                         <p>Støt Inge's Kattehjem og vær med til at gøre en forskel for katte i nød. Hver dag arbejder vi
                             for at redde, pleje og finde nye hjem til katte, der har brug for en ny chance i livet. Med
                             din støtte kan vi sikre hjemløse og forsømte katte den omsorg og kærlighed, de fortjener,
@@ -233,7 +230,6 @@
                             fået en ny chance. Vidste du, at din donation er fradragsberettiget? Det betyder, at du kan
                             få en del af dit bidrag tilbage via din selvangivelse. Hver en krone gør en forskel – støt
                             os i dag og vær med til at give en kat et nyt liv!</p>
-                    </ul>
                 </div>
                 <div class="benefits-image">
                     <img src="images/ingeskatte.png" alt="Happy Cat">
@@ -243,7 +239,7 @@
     </section>
 
     <!-- Maui's Case Section -->
-    <section class="maui-section">
+    <section id="maui" class="maui-section">
         <div class="container">
             <h2>Maui's case</h2>
             <div class="maui-content">
@@ -251,25 +247,25 @@
                     <!-- <img src="images/maui.png" alt="Maui the Cat"> -->
                     <div class="slideshow-container">
                         <div class="mySlides fade">
-                            <img src="/images/maui1.png" style="width: 100%;">
+                            <img src="/images/maui1.png" style="width: 100%;" alt="Maui kat 1">
                         </div>
                         <div class="mySlides fade">
-                            <img src="/images/maui2.png" style="width: 100%;">
+                            <img src="/images/maui2.png" style="width: 100%;" alt="Maui kat 2">
                         </div>
                         <div class="mySlides fade">
-                            <img src="/images/maui3.png" style="width: 100%;">
+                            <img src="/images/maui3.png" style="width: 100%;" alt="Maui kat 3">
                         </div>
                         <div class="mySlides fade">
-                            <img src="/images/maui4.png" style="width: 100%;">
+                            <img src="/images/maui4.png" style="width: 100%;" alt="Maui kat 4">
                         </div>
                         <div class="mySlides fade">
-                            <img src="/images/maui5.png" style="width: 100%;">
+                            <img src="/images/maui5.png" style="width: 100%;" alt="Maui kat 5">
                         </div>
                         <div class="mySlides fade">
-                            <img src="/images/maui6.png" style="width: 100%;">
+                            <img src="/images/maui6.png" style="width: 100%;" alt="Maui kat 6">
                         </div>
                         <div class="mySlides fade">
-                            <img src="/images/maui7.png" style="width: 100%;">
+                            <img src="/images/maui7.png" style="width: 100%;" alt="Maui kat 7">
                         </div>
 
                         <!-- previous and next buttons -->
@@ -306,7 +302,7 @@
     </section>
 
     <!-- Application Section -->
-    <section class="application-section">
+    <section id="frivillig" class="application-section">
         <div class="container">
             <div class="application-content">
                 <!-- Informations Tekst -->
