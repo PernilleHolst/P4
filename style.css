@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
 /* ===== GLOBAL STYLES ===== */
 /* Global Styles */
 html {
@@ -29,14 +32,19 @@ h3,
 h4 {
     margin-bottom: 20px;
     color: #333;
+    font-family: 'Lato', sans-serif;
+    font-style: bold;
 }
 
 h5 {
     color: black;
+    font-family: 'Open Sans', sans-serif;
 }
 
 p {
     margin-bottom: 15px;
+    font-family: 'Open Sans', sans-serif;
+    font-style: light;
 }
 
 ul {
@@ -52,25 +60,25 @@ img {
 /* Navigation Bar */
 /* Generel styling */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Lato', sans-serif;
     margin: 0;
     padding: 0;
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Lato', sans-serif;
     margin: 0;
     padding: 0;
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Lato', sans-serif;
     margin: 0;
     padding: 0;
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Lato', sans-serif;
     margin: 0;
     padding: 0;
 }
@@ -102,6 +110,7 @@ body {
 .top-links a {
     text-decoration: none;
     color: white;
+    font-family: 'Open Sans';
     font-size: 14px;
     text-transform: uppercase;
 }
@@ -257,6 +266,7 @@ body {
 .search {
     text-decoration: none;
     color: #333;
+    font-family: 'Open Sans';
     font-size: 16px;
     padding-left: 7px;
 
@@ -293,6 +303,7 @@ body {
     padding: 8px 12px;
     color: #972620;
     text-decoration: none;
+    font-family: 'Open Sans';
     font-size: 14px;
 }
 
@@ -639,6 +650,7 @@ body {
     position: absolute;
     top: 140px;
     left: 30px;
+    font-family: 'Lato';
     font-size: 46px;
     font-weight: bold;
     color: #fff;
@@ -684,6 +696,7 @@ body {
     font-size: 14px;
     text-align: center;
     margin: -15px 0 20px 0;
+    font-family: 'Open Sans';
     font-style: italic;
 }
 
@@ -691,6 +704,7 @@ body {
     color: #333;
     text-align: center;
     margin-bottom: 20px;
+    font-family: 'Open Sans';
 }
 
 .donation-type {
@@ -837,6 +851,7 @@ body {
     margin-top: 5px;
     white-space: nowrap;
     /* Forhindrer teksten i at bryde til næste linje */
+    font-family: 'Open Sans';
 }
 
 .qr-text-2 {
@@ -851,6 +866,7 @@ body {
     /* Gør det muligt at bruge top */
     top: 7px;
     /* Flytter billedet ned */
+    font-family: 'Open Sans';
 }
 
 .payment-btn {
@@ -874,6 +890,7 @@ body {
     font-size: 48px;
     font-weight: bold;
     text-align: left;
+    font-family: 'Open Sans';
 }
 
 @media (min-width: 769px) and (max-width: 1300px) {
@@ -925,6 +942,7 @@ body {
     text-align: left;
     display: flex;
     flex-direction: column;
+    font-family: 'Open Sans';
 }
 
 /* RESPONSIVITET */
@@ -1029,11 +1047,13 @@ body {
 h3 {
     font-size: 22px;
     margin-bottom: 10px;
+    font-family: 'Open Sans';
 }
 
 p {
     font-size: 16px;
     line-height: 1.6;
+    font-family: 'Open Sans';
 }
 
 .support-btn {
@@ -1056,8 +1076,10 @@ p {
 @media (min-width: 769px) and (max-width: 1100px) {
     .column video {
         object-fit: contain;
-        background-color: black; /* For at undgå gennemsigtige kanter */
+        background-color: black;
+        /* For at undgå gennemsigtige kanter */
     }
+
     .support-section h5 {
         font-size: 28px;
         text-align: center;
@@ -1076,11 +1098,13 @@ p {
 
 @media (min-width: 481px) and (max-width: 768px) {
     .column video {
-        height: auto; /* Gør at højden følger proportioner */
+        height: auto;
+        /* Gør at højden følger proportioner */
         max-height: 250px;
         object-fit: contain;
         background-color: black;
     }
+
     .support-section h5 {
         font-size: 28px;
         text-align: center;
@@ -1123,6 +1147,7 @@ p {
     text-align: left;
     font-size: 32px;
     margin-bottom: 40px;
+    font-family: 'Lato';
 }
 
 .benefits-content {
@@ -1133,6 +1158,7 @@ p {
 
 .benefits-text {
     flex: 1;
+    font-family: 'Open Sans';
 }
 
 .benefits-image {
@@ -1158,6 +1184,7 @@ p {
     font-size: 32px;
     margin-bottom: 50px;
     color: white;
+    font-family: 'Lato';
 }
 
 .maui-content {
@@ -1172,6 +1199,7 @@ p {
 
 .maui-text {
     flex: 1;
+    font-family: 'Open Sans';
 }
 
 .maui-image img {
@@ -1211,6 +1239,7 @@ img {
     transition: 0.6s ease;
     border-radius: 0 3px 3px 0;
     user-select: none;
+    font-family: 'Open Sans';
 }
 
 .next {
@@ -1332,12 +1361,14 @@ img {
     font-size: 28px;
     color: #000;
     margin-bottom: 14%;
+    font-family: 'Lato';
 }
 
 .info-box p {
     font-size: 16px;
     color: #333;
     line-height: 1.6;
+    font-family: 'Open Sans';
 }
 
 .info-image {
@@ -1356,6 +1387,7 @@ img {
     font-weight: bold;
     font-size: 1rem;
     margin-bottom: 0px;
+    font-family: 'Lato';
 }
 
 /* Formularboks - højre side */
@@ -1371,6 +1403,7 @@ img {
     font-size: 28px;
     margin-bottom: 20px;
     color: #972620;
+    font-family: 'Lato';
 }
 
 .application-form {
@@ -1392,6 +1425,7 @@ img {
     border: 1px solid #ddd;
     border-radius: 5px;
     font-size: 16px;
+    font-family: 'Open Sans';
 }
 
 .file-upload {
@@ -1432,6 +1466,7 @@ img {
     font-size: 18px;
     cursor: pointer;
     transition: background-color 0.3s;
+    font-family: 'Lato';
 }
 
 .submit-btn:hover {
@@ -1542,6 +1577,7 @@ img {
 .footer-column h4 {
     color: #333;
     margin-bottom: 20px;
+    font-family: 'Open Sans';
 }
 
 .footer-column ul {
@@ -1601,6 +1637,7 @@ img {
 .copyright {
     text-align: center;
     padding-top: 20px;
+    font-family: 'Open Sans', sans-serif;
 }
 
 /* Responsive Design */
@@ -1615,7 +1652,7 @@ img {
     }
 
     .donation-box {
-      position: static;
+        position: static;
         transform: none;
         width: 100%;
         margin-top: 30px;
