@@ -634,7 +634,9 @@ body {
 
 /* ===== HERO SECTION ===== */
 /* Hero Section */
-.hero {
+
+/*TODO: Remove as it does nothing. it matches 0 elements in your html*/
+/* .hero {
     .hero {
         background-size: cover;
         background-position: center;
@@ -644,7 +646,7 @@ body {
         display: flex;
         align-items: center;
     }
-}
+} */
 
 .page-title {
     position: absolute;
