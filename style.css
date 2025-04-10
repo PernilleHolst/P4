@@ -33,7 +33,7 @@ h4 {
     margin-bottom: 20px;
     color: #333;
     font-family: 'Lato', sans-serif;
-    font-style: bold;
+    font-weight: bold;
 }
 
 h5 {
@@ -44,7 +44,7 @@ h5 {
 p {
     margin-bottom: 15px;
     font-family: 'Open Sans', sans-serif;
-    font-style: light;
+    font-weight: 300;
 }
 
 ul {
