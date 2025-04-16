@@ -1,18 +1,18 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const burgerMenus = document.querySelectorAll(".burger-menu"); // Array of all .burger-menu elements
+  const burgerMenus = document.querySelectorAll(".burger-menu");
   const menuContent = document.querySelector(".burger-menu-content");
 
   const ctaButtonDesktop = document.getElementById("ctaButton");
   const dropdownDesktop = document.getElementById("dropdownMenuDesktop");
 
-  const ctaButtonMobile = document.querySelector(".burger-call-to-action .cta-button"); // mine const (konstant) er variabler som ikke bør ændre sig
-  const dropdownMobile = document.getElementById("dropdownMenuMobile"); // Alt det der står document. henter ting fra DOM (Document Object Model)
+  const ctaButtonMobile = document.querySelector(".burger-call-to-action .cta-button"); 
+  const dropdownMobile = document.getElementById("dropdownMenuMobile"); 
 
   // Burger-menu toggle
-  for (let burgerMenu of burgerMenus) { // For each element in the burgerMenus array of elements (for loop)
-    burgerMenu.addEventListener("click", function (event) { // Er en anonym funktion som bliver kaldt når det bliver trykket på burgerMenu elementet
+  for (let burgerMenu of burgerMenus) { 
+    burgerMenu.addEventListener("click", function (event) { 
       event.stopPropagation();
-      burgerMenu.classList.toggle("open"); // Mine objekter er . . . og de har properties og metoder 
+      burgerMenu.classList.toggle("open"); 
       menuContent.classList.toggle("show");
     });
 
@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
       dropdownMobile &&
       !dropdownMobile.contains(e.target) &&
       !ctaButtonMobile.contains(e.target)
-    ) { // er en kontrolstruktur (også selvom den ikke siger if else) og det er fordi at hvis "" ikke findes, så gør den bare ikke noget
+    ) {
       dropdownMobile.classList.remove("show");
       ctaButtonMobile.classList.remove("active"); 
     }
